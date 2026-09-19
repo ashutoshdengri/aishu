@@ -1,0 +1,1280 @@
+/* ==========================================================================
+   AISHWARYA-WEBSITE — LUXURY CHAMPAGNE GOLD & MIDNIGHT THEME
+   Midnight Starlight & Champagne Gold | 3D Flip Cards | Glassmorphism System
+   ========================================================================== */
+
+/* --- Reset & Core Typography --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #060911;
+  color: #f7f4ee;
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Elegant Slim Desktop Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060911;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 193, 88, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 193, 88, 0.65);
+}
+
+body.gate-active {
+  overflow: hidden !important;
+  height: 100vh;
+  height: 100dvh;
+}
+
+#main-content.hidden,
+main.hidden {
+  display: none !important;
+}
+
+/* --- Professional Luxury Font Hierarchy --- */
+.font-luxury {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-romantic {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.font-serif-title {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.font-handwriting {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.font-calligraphy {
+  font-family: 'Alex Brush', cursive;
+  line-height: 1.35;
+  padding-bottom: 0.15em;
+}
+
+/* --- Background Starfield Canvas --- */
+#universe-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ambient Radial Glows in the Atmosphere (Warm Champagne Gold & Candlelight) */
+.ambient-glow-1 {
+  position: fixed;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(229, 193, 88, 0.08) 0%, transparent 70%);
+  top: -10%;
+  right: -10%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+  animation: floatAmbient 12s ease-in-out infinite alternate;
+}
+
+.ambient-glow-2 {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+  bottom: 10%;
+  left: -15%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+  animation: floatAmbient 14s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatAmbient {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, -30px) scale(1.15); }
+}
+
+/* --- Luxury Midnight Glassmorphism Cards --- */
+.glass-card {
+  background: rgba(13, 18, 28, 0.78);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(229, 193, 88, 0.2);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: visible;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(229, 193, 88, 0.45);
+  box-shadow: 0 25px 60px -10px rgba(212, 175, 55, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+}
+
+.glass-card-subtle {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 193, 88, 0.16);
+  border-radius: 1.25rem;
+}
+
+/* Glowing Luxury Champagne Gold Text Gradients */
+.text-gradient-rose,
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF5DC 25%, #E5C158 60%, #C49726 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  line-height: 1.25 !important;
+  padding-bottom: 0.18em !important;
+  vertical-align: middle;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Ensure all section headings break cleanly onto their own line */
+h1.text-gradient-rose, h1.text-gradient-gold,
+h2.text-gradient-rose, h2.text-gradient-gold,
+h3.text-gradient-rose, h3.text-gradient-gold,
+h4.text-gradient-rose, h4.text-gradient-gold {
+  display: block !important;
+  width: 100%;
+  clear: both;
+}
+
+/* Badge wrapper to enforce clean line break above headings */
+.badge-pill-container {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(229, 193, 88, 0.45), 0 0 40px rgba(196, 151, 38, 0.25);
+}
+
+/* Refined Luxury Champagne Gold Silk Buttons */
+.btn-rose-shimmer,
+.btn-romantic-enter {
+  background: linear-gradient(135deg, #e5c158 0%, #c49726 50%, #996515 100%);
+  color: #080c16;
+  font-weight: 700;
+  border: 1px solid rgba(255, 243, 214, 0.5);
+  box-shadow: 0 10px 28px rgba(196, 151, 38, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-rose-shimmer:hover,
+.btn-romantic-enter:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 34px rgba(229, 193, 88, 0.55), inset 0 1px 2px rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 250, 230, 0.8);
+}
+
+.btn-rose-shimmer:active,
+.btn-romantic-enter:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* --- Act 0: Romantic Prologue Gate (First Landing Page) --- */
+#prologue-gate {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.12); /* Ultra-clean minimal tint so background music video is vividly visible */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+  padding: 1rem;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+#prologue-gate::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#prologue-gate.unlocked {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Ambient glow orbs hidden so they do not tint the video */
+.gate-glow-1,
+.gate-glow-2 {
+  display: none !important;
+}
+
+/* Luxurious Romantic Translucent Glass Card (Compact & Glassy Meshed Blurred) */
+.romantic-prologue-card {
+  /* Translucent frosted glass with subtle champagne mesh radiance */
+  background: radial-gradient(120% 120% at 10% 10%, rgba(229, 193, 88, 0.15) 0%, transparent 55%),
+              radial-gradient(100% 100% at 90% 90%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
+              linear-gradient(145deg, rgba(10, 15, 26, 0.44) 0%, rgba(5, 8, 15, 0.52) 100%);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(229, 193, 88, 0.38);
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.6),
+              inset 0 1px 1.5px rgba(255, 255, 255, 0.25),
+              0 0 30px rgba(229, 193, 88, 0.12);
+  border-radius: 1.5rem;
+  max-width: 430px;
+  width: 100%;
+  max-height: 92dvh;
+  overflow-y: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  position: relative;
+}
+
+.romantic-prologue-card::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.romantic-prologue-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  animation: cardShimmer 7s infinite;
+  pointer-events: none;
+}
+
+@keyframes cardShimmer {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+/* --- 3D Interactive Flip Cards ("Things I Never Told You") --- */
+.perspective-container {
+  perspective: 1400px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 380px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-style: preserve-3d;
+  border-radius: 1.5rem;
+}
+
+.flip-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Cards ONLY reveal on click, never on hover */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.flip-card-front {
+  background: rgba(13, 18, 30, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(229, 193, 88, 0.22);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.flip-card-back {
+  background: linear-gradient(145deg, rgba(20, 27, 44, 0.94) 0%, rgba(10, 14, 24, 0.98) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(229, 193, 88, 0.45);
+  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.2);
+  transform: rotateY(180deg);
+}
+
+/* --- Animated Timeline --- */
+.timeline-stem {
+  position: relative;
+}
+
+.timeline-stem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(229, 193, 88, 0.1) 0%, rgba(229, 193, 88, 0.7) 20%, rgba(245, 158, 11, 0.7) 70%, rgba(229, 193, 88, 0.1) 100%);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .timeline-stem::before {
+    left: 20px;
+  }
+}
+
+.timeline-dot {
+  position: relative;
+  z-index: 2;
+  background: #e5c158;
+  box-shadow: 0 0 20px rgba(229, 193, 88, 0.8), 0 0 40px rgba(245, 158, 11, 0.4);
+}
+
+/* --- Love Calculator Meter --- */
+.calc-meter-track {
+  width: 100%;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid rgba(229, 193, 88, 0.25);
+  position: relative;
+}
+
+.calc-meter-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 40%, #e5c158 80%, #34d399 100%);
+  border-radius: 9999px;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.8);
+  transition: width 3.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Pulsing heart animation */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.18); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.25); }
+  70% { transform: scale(1); }
+}
+
+.animate-heartbeat {
+  animation: heartBeat 2s infinite ease-in-out;
+}
+
+/* --- Wax-Sealed Romantic Envelope --- */
+.envelope-wrapper {
+  perspective: 1000px;
+  margin: 0 auto;
+  max-width: 580px;
+  width: 100%;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(145deg, #131a2a 0%, #0d121e 100%);
+  border-radius: 1rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(229, 193, 88, 0.28);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.envelope:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(212, 175, 55, 0.25);
+}
+
+.wax-seal {
+  width: 68px;
+  height: 68px;
+  background: radial-gradient(circle, #fde047 20%, #b8860b 80%);
+  border-radius: 50%;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #080c16;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.envelope:hover .wax-seal {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Letter Paper Slide-out */
+.letter-paper {
+  background: #fdfbf7;
+  color: #1a2233;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: max-height 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.7s ease, transform 0.7s ease;
+}
+
+.letter-paper.revealed {
+  max-height: 1800px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* --- Relationship Analytics Evidence Bars --- */
+.stat-bar-bg {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.stat-bar-value {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #e5c158);
+  border-radius: 9999px;
+  width: 0%;
+  transition: width 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* --- Interactive Quiz Options --- */
+.quiz-option-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(229, 193, 88, 0.2);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  transition: all 0.25s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.quiz-option-btn:hover {
+  background: rgba(229, 193, 88, 0.12);
+  border-color: rgba(229, 193, 88, 0.5);
+  transform: translateX(4px);
+}
+
+.quiz-option-btn.selected {
+  background: linear-gradient(135deg, rgba(229, 193, 88, 0.25), rgba(245, 158, 11, 0.2));
+  border-color: #e5c158;
+  box-shadow: 0 0 20px rgba(229, 193, 88, 0.35);
+}
+
+/* Runaway No Button */
+#runaway-quiz-btn {
+  width: 84px !important;
+  min-width: 84px !important;
+  max-width: 84px !important;
+  flex: 0 0 84px !important;
+  flex-shrink: 0 !important;
+  height: 50px !important;
+  padding: 0 1rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  position: relative;
+  z-index: 30;
+  will-change: transform;
+}
+
+#runaway-quiz-btn:hover {
+  background: rgba(229, 193, 88, 0.12);
+  border-color: rgba(229, 193, 88, 0.5);
+}
+
+/* --- Act 10: Final Screen Curtain Transition & Certificate --- */
+#finale-curtain {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease-in-out;
+  overflow: hidden !important;
+}
+
+#finale-curtain.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Strictly hide elements when hidden class is present */
+#final-surprise-box.hidden,
+.certificate-container.hidden,
+#certificate-actions.hidden {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Certificate of Excellence Luxury Theme */
+.certificate-container {
+  background: radial-gradient(circle at 50% 25%, rgba(38, 14, 30, 0.96), rgba(13, 4, 16, 0.98));
+  border: 2.5px solid rgba(245, 158, 11, 0.65);
+  box-shadow: 0 0 50px rgba(245, 158, 11, 0.25), inset 0 0 40px rgba(245, 158, 11, 0.08);
+  position: relative;
+  max-height: calc(100vh - 75px);
+  max-height: calc(100dvh - 75px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certificate-inner-border {
+  border: 1.5px solid rgba(245, 158, 11, 0.4);
+  outline: 1px dashed rgba(245, 158, 11, 0.3);
+  outline-offset: -6px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ornate Corner Rosettes (Positioned directly on outer border corners like in UI screenshot) */
+.certificate-corner-tl,
+.certificate-corner-tr,
+.certificate-corner-bl,
+.certificate-corner-br {
+  position: absolute;
+  color: #f59e0b;
+  font-size: 24px;
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.7));
+  pointer-events: none;
+  z-index: 25;
+}
+.certificate-corner-tl { top: -12px; left: -12px; }
+.certificate-corner-tr { top: -12px; right: -12px; }
+.certificate-corner-bl { bottom: -12px; left: -12px; }
+.certificate-corner-br { bottom: -12px; right: -12px; }
+
+.certificate-seal {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #fde68a 0%, #d97706 60%, #92400e 100%);
+  color: #3b1704;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.6), inset 0 0 8px rgba(255, 255, 255, 0.6);
+  border: 2.5px double #fef3c7;
+  animation: sealGlow 3.5s ease-in-out infinite alternate;
+  overflow: visible;
+}
+
+.certificate-seal > div:first-child {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes sealGlow {
+  0% { box-shadow: 0 0 12px rgba(245, 158, 11, 0.4), inset 0 0 6px rgba(255, 255, 255, 0.4); }
+  100% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.8), inset 0 0 12px rgba(255, 255, 255, 0.7); }
+}
+
+.certificate-ribbon-left, .certificate-ribbon-right {
+  position: absolute;
+  bottom: -11px;
+  width: 12px;
+  height: 18px;
+  background: linear-gradient(to bottom, #d97706, #78350f);
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.certificate-ribbon-left {
+  left: 14px;
+  transform: rotate(20deg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+}
+.certificate-ribbon-right {
+  right: 14px;
+  transform: rotate(-20deg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+}
+
+/* Ensure no scrolling on smaller viewport heights in UI */
+@media (max-height: 720px) {
+  .certificate-container {
+    max-height: calc(100vh - 60px);
+    max-height: calc(100dvh - 60px);
+    padding: 8px 12px !important;
+  }
+  .certificate-inner-border {
+    padding: 8px 10px !important;
+  }
+  #final-surprise-box h1 {
+    font-size: 2.2rem !important;
+  }
+  #final-surprise-box h2 {
+    font-size: 1.2rem !important;
+  }
+  .certificate-seal {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
+/* Floating interactive hearts created on click */
+.floating-particle-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 24px;
+  animation: floatFadeOut 1.4s ease-out forwards;
+}
+
+@keyframes floatFadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
+  }
+  50% {
+    transform: translate(calc(-50% + var(--dx)), calc(-50% - 70px)) scale(1.2) rotate(var(--rot));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% - 130px)) scale(1.4) rotate(var(--rot));
+  }
+}
+
+/* ==========================================================================
+   THE 9-BOX INTERACTIVE MEMORY PICTURE PUZZLE GATE
+   ========================================================================== */
+#puzzle-gate {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  z-index: 1100;
+  background: rgba(0, 0, 0, 0.12); /* Clean view of background video with contrast */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  padding: 0.75rem;
+}
+
+#puzzle-gate::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#puzzle-gate.unlocked {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: none !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE BACKGROUND CINEMATIC VIDEO (Plays clearly above ambient glows)
+   ========================================================================== */
+#bg-video-container {
+  position: fixed;
+  inset: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  height: calc(100dvh + 12px); /* Mobile dynamic viewport height support */
+  z-index: 2; /* Sits ABOVE ambient glows so no pink/purple tint falls on the video */
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#bg-video-container.hidden-video {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.15); /* Zooms in 15% to eliminate black letterbox strips at the bottom/edges */
+  transform-origin: center center;
+}
+
+.romantic-puzzle-card {
+  /* Translucent frosted glass with subtle champagne mesh radiance */
+  background: radial-gradient(120% 120% at 10% 10%, rgba(229, 193, 88, 0.15) 0%, transparent 55%),
+              radial-gradient(100% 100% at 90% 90%, rgba(245, 158, 11, 0.10) 0%, transparent 50%),
+              linear-gradient(145deg, rgba(10, 15, 26, 0.46) 0%, rgba(5, 8, 15, 0.54) 100%);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(229, 193, 88, 0.38);
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.6),
+              inset 0 1px 1.5px rgba(255, 255, 255, 0.25),
+              0 0 30px rgba(229, 193, 88, 0.12);
+  border-radius: 1.5rem;
+  max-width: 430px;
+  width: 100%;
+  max-height: 94dvh;
+  overflow-y: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  position: relative;
+}
+
+.romantic-puzzle-card::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* --- Solved State: Compact Single Box with Zero Scrolling --- */
+.romantic-puzzle-card.puzzle-completed {
+  padding: 1.1rem 1.25rem !important;
+  max-height: 94dvh !important;
+  overflow: hidden !important;
+}
+
+.romantic-puzzle-card.puzzle-completed #puzzle-subtitle,
+.romantic-puzzle-card.puzzle-completed #puzzle-stats-bar,
+.romantic-puzzle-card.puzzle-completed #puzzle-helper-row,
+.romantic-puzzle-card.puzzle-completed #puzzle-peek-preview {
+  display: none !important;
+}
+
+.romantic-puzzle-card.puzzle-completed .puzzle-board-wrapper {
+  width: min(220px, 56vw) !important;
+  margin: 0.25rem auto 0.45rem auto !important;
+}
+
+.romantic-puzzle-card.puzzle-completed #puzzle-victory-banner {
+  margin-top: 0.25rem !important;
+  padding: 0.55rem 0.75rem !important;
+}
+
+/* --- Pre-Story Lock State: Entire initial view fits in 100vh with zero scroll --- */
+body.pre-story-locked {
+  height: 100vh !important;
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  overflow: hidden !important;
+}
+
+body.pre-story-locked main#main-content {
+  height: 100vh !important;
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.25rem !important;
+  overflow: hidden !important;
+}
+
+body.pre-story-locked #the-beginning {
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+body.pre-story-locked #page-footer {
+  width: 100% !important;
+  flex-shrink: 0 !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.5rem !important;
+  margin-top: auto !important;
+}
+
+/* --- Unlocked State Styling for Stable Hero Layout --- */
+#the-beginning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 40px);
+  min-height: calc(100dvh - 40px);
+  padding: 0 0.5rem 2.5rem 0.5rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#question-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for Yes Button in the gate */
+#ask-yes-btn {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+  transform-origin: center center;
+  position: relative;
+  z-index: 10;
+}
+
+#ask-cat-img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+#question-card:hover #ask-cat-img {
+  transform: scale(1.04);
+}
+
+.puzzle-board-wrapper {
+  width: min(280px, 74vw);
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  .puzzle-board-wrapper {
+    width: 300px;
+  }
+}
+
+@media (min-width: 640px) {
+  .puzzle-board-wrapper {
+    width: 320px;
+  }
+}
+
+.puzzle-grid {
+  width: 100%;
+  height: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(3, 1fr) !important;
+  gap: 0.375rem;
+  transition: gap 0.4s ease, box-shadow 0.4s ease;
+}
+
+.puzzle-tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  border-radius: 0.5rem;
+  background-image: url('img/imagees.jpg');
+  background-size: 300% 300%;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(229, 193, 88, 0.45);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.puzzle-tile.movable {
+  border-color: rgba(251, 191, 36, 0.85);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.puzzle-tile.movable:hover {
+  transform: scale(1.04);
+  border-color: #fde047;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.7);
+}
+
+.puzzle-tile:active {
+  transform: scale(0.97);
+}
+
+/* Empty Space in 8-puzzle */
+.puzzle-tile.empty-slot {
+  background-image: none !important;
+  background-color: rgba(12, 17, 28, 0.55);
+  border: 2px dashed rgba(229, 193, 88, 0.35);
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Gentle shake when user clicks an immovable tile */
+.puzzle-tile.shake {
+  animation: tileShake 0.35s ease;
+}
+
+@keyframes tileShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.puzzle-tile .tile-number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fde68a;
+  font-size: 11px;
+  font-weight: 700;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(229, 193, 88, 0.6);
+  pointer-events: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.puzzle-grid.solved {
+  gap: 1px !important;
+  box-shadow: 0 0 35px rgba(229, 193, 88, 0.7);
+}
+
+.puzzle-grid.solved .puzzle-tile {
+  border-radius: 0.2rem;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+/* Hide scrollbar for Horizontal Scroller */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gallery Photo Frames */
+.gallery-frame {
+  transition: all 0.35s ease;
+}
+
+.gallery-frame:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 193, 88, 0.5);
+  box-shadow: 0 15px 35px -5px rgba(229, 193, 88, 0.25);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 640px) {
+  .flip-card {
+    height: 350px;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL THEME MAPPER: CHAMPAGNE GOLD & MIDNIGHT STARLIGHT
+   Converts all legacy palette accents to radiant gold, amber, and champagne
+   ========================================================================== */
+.text-pink-100 { color: #fdfbf7 !important; }
+.text-pink-200 { color: #fef3c7 !important; }
+.text-pink-300 { color: #fde68a !important; }
+.text-pink-400 { color: #facc15 !important; }
+.text-pink-500 { color: #eab308 !important; }
+
+[class*="text-pink-100/"] { color: rgba(253, 251, 247, 0.9) !important; }
+[class*="text-pink-200/"] { color: rgba(254, 243, 199, 0.85) !important; }
+[class*="text-pink-300/"] { color: rgba(253, 230, 138, 0.85) !important; }
+[class*="text-pink-400/"] { color: rgba(250, 204, 21, 0.85) !important; }
+
+.border-pink-300, [class*="border-pink-300"] { border-color: rgba(253, 230, 138, 0.3) !important; }
+.border-pink-400, [class*="border-pink-400"] { border-color: rgba(229, 193, 88, 0.35) !important; }
+.border-pink-500, [class*="border-pink-500"] { border-color: rgba(234, 179, 8, 0.4) !important; }
+
+[class*="bg-pink-950"] { background-color: rgba(12, 17, 28, 0.75) !important; }
+[class*="bg-pink-900"] { background-color: rgba(24, 30, 46, 0.65) !important; }
+[class*="bg-pink-800"] { background-color: rgba(180, 130, 20, 0.4) !important; }
+[class*="bg-pink-500/"] { background-color: rgba(229, 193, 88, 0.15) !important; }
+.bg-pink-500 { background-color: #e5c158 !important; }
+
+[class*="from-pink-"] { --tw-gradient-from: #e5c158 !important; }
+[class*="to-pink-"] { --tw-gradient-to: #b8860b !important; }
+[class*="via-pink-"] { --tw-gradient-stops: var(--tw-gradient-from), #fde047, var(--tw-gradient-to) !important; }
+
+[class*="shadow-pink-"] { box-shadow: 0 10px 25px -5px rgba(229, 193, 88, 0.35) !important; }
+[class*="ring-pink-"] { --tw-ring-color: rgba(229, 193, 88, 0.6) !important; }
+
+/* Background Cinematic Video Container Transitions */
+#bg-video-container {
+  transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+.hidden-video {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+/* ==========================================================================
+   PRINT STYLESHEET (FULL PAGE A4 PDF DOWNLOAD FOR BEST GIRLFRIEND CERTIFICATE)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0mm; /* Removes all browser default headers (URL, date) and footers (page 1/1) */
+  }
+
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    box-sizing: border-box !important;
+  }
+
+  html, body {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-width: 210mm !important;
+    max-height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #0d040f !important;
+    overflow: hidden !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Hide background canvases, audio controls, main narrative, action buttons, and typewriter */
+  canvas,
+  #universe-canvas,
+  #bg-video-container,
+  #bg-audio,
+  #audio-player-widget,
+  #prologue-gate,
+  #puzzle-gate,
+  #main-content,
+  footer,
+  #typewriter-container,
+  #certificate-actions,
+  #download-cert-btn,
+  #home-page-btn,
+  #close-tab-btn,
+  .floating-particle-heart {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  #finale-curtain {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    max-width: 210mm !important;
+    max-height: 297mm !important;
+    margin: 0 !important;
+    padding: 10mm !important;
+    background: #0d040f !important;
+    backdrop-filter: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  #finale-curtain > div {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Sized to perfectly fill standard A4 sheet (210mm x 297mm) without bending or stretching */
+  #final-surprise-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 190mm !important;
+    height: 275mm !important;
+    max-width: 190mm !important;
+    max-height: 275mm !important;
+    margin: 0 auto !important;
+    padding: 7mm !important;
+    box-sizing: border-box !important;
+    background: radial-gradient(circle at 50% 25%, #260e1e, #0d0410) !important;
+    border: 3.5px solid #f59e0b !important;
+    border-radius: 20px !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    position: relative !important;
+  }
+
+  .certificate-inner-border {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 6mm 8mm !important;
+    box-sizing: border-box !important;
+    border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
+    outline: 1.5px dashed rgba(245, 158, 11, 0.4) !important;
+    outline-offset: -5mm !important;
+    background: rgba(0, 0, 0, 0.45) !important;
+    border-radius: 14px !important;
+  }
+
+  /* 4 Ornate Corner Rosettes in Print */
+  .certificate-corner-tl,
+  .certificate-corner-tr,
+  .certificate-corner-bl,
+  .certificate-corner-br {
+    display: block !important;
+    visibility: visible !important;
+    position: absolute !important;
+    color: #f59e0b !important;
+    font-size: 26px !important;
+    z-index: 50 !important;
+  }
+  .certificate-corner-tl { top: -13px !important; left: -13px !important; }
+  .certificate-corner-tr { top: -13px !important; right: -13px !important; }
+  .certificate-corner-bl { bottom: -13px !important; left: -13px !important; }
+  .certificate-corner-br { bottom: -13px !important; right: -13px !important; }
+
+  /* Clear animations and optimize typography for physical A4 print */
+  #final-surprise-box .animate-heartbeat,
+  #final-surprise-box .animate-pulse,
+  #final-surprise-box .certificate-seal {
+    animation: none !important;
+  }
+
+  #final-surprise-box h1 {
+    font-size: 40pt !important;
+    line-height: 1.15 !important;
+    margin: 1.5mm 0 !important;
+    color: #fef08a !important;
+  }
+
+  #final-surprise-box h2 {
+    font-size: 20pt !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5mm !important;
+  }
+
+  #final-surprise-box p {
+    line-height: 1.4 !important;
+  }
+
+  /* Maintain single-row 4 badges in print */
+  #final-surprise-box .grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 2mm !important;
+  }
+
+  #final-surprise-box .certificate-seal {
+    width: 62px !important;
+    height: 62px !important;
+    box-shadow: none !important;
+    border: 2.5px solid #fde68a !important;
+    background: radial-gradient(circle at 40% 35%, #fde68a 0%, #d97706 60%, #92400e 100%) !important;
+    overflow: visible !important;
+  }
+
+  #final-surprise-box .certificate-seal > div:first-child {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .certificate-ribbon-left, .certificate-ribbon-right {
+    display: block !important;
+    visibility: visible !important;
+    background: #d97706 !important;
+    z-index: 1 !important;
+  }
+}

@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>A World For Aishwarya 💖 | Our Story</title>
+  <title>A World For Aishwarya</title>
   <meta name="description" content="A personalized interactive love letter and cinematic memory world for Aishwarya.">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
 
   <!-- Google Fonts: Luxury Editorial & Romantic Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,14 +33,17 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="selection:bg-amber-400 selection:text-slate-950">
 
   <!-- Background Interactive Canvas (Starfield & Drifting Petals) -->
   <canvas id="universe-canvas"></canvas>
 
   <!-- Background Cinematic Video (Plays clearly without tint, audio on by default) -->
-  <div id="bg-video-container" class="fixed inset-0 z-[2] overflow-hidden pointer-events-none transition-opacity duration-1000">
-    <video id="bg-video" autoplay loop playsinline webkit-playsinline preload="auto" class="w-full h-full object-cover object-center">
+  <div id="bg-video-container"
+    class="fixed inset-0 z-[2] overflow-hidden pointer-events-none transition-opacity duration-1000">
+    <video id="bg-video" autoplay loop playsinline webkit-playsinline preload="auto"
+      class="w-full h-full object-cover object-center">
       <source src="video/Main Koi Aisa Geet Gaoon.mp4" type="video/mp4">
     </video>
   </div>
@@ -60,36 +67,45 @@
     <div class="gate-glow-1"></div>
     <div class="gate-glow-2"></div>
 
-    <div class="max-w-md w-full text-center romantic-prologue-card p-5 sm:p-7 relative z-10 my-auto animate-fade-in shadow-2xl" data-aos="zoom-in" data-aos-duration="1000">
-      
+    <div
+      class="max-w-md w-full text-center romantic-prologue-card p-5 sm:p-7 relative z-10 my-auto animate-fade-in shadow-2xl"
+      data-aos="zoom-in" data-aos-duration="1000">
+
       <!-- Romantic Heart Crest with Breathing Halo -->
       <div class="relative w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2.5 flex items-center justify-center">
         <div class="absolute inset-0 rounded-full bg-amber-500/20 blur-md animate-pulse"></div>
-        <div class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-amber-400/20 to-slate-950/70 border border-amber-300/40 flex items-center justify-center shadow-inner">
-          <i class="fas fa-heart text-amber-400 text-lg sm:text-xl animate-heartbeat drop-shadow-[0_0_8px_rgba(251,191,36,0.8)]"></i>
+        <div
+          class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-amber-400/20 to-slate-950/70 border border-amber-300/40 flex items-center justify-center shadow-inner">
+          <i
+            class="fas fa-heart text-amber-400 text-lg sm:text-xl animate-heartbeat drop-shadow-[0_0_8px_rgba(251,191,36,0.8)]"></i>
         </div>
       </div>
 
       <!-- Delicate Romance Badge -->
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-amber-400/30 text-[11px] sm:text-xs text-amber-200 tracking-wider font-medium mb-2.5 backdrop-blur-sm shadow-sm">
+      <div
+        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-amber-400/30 text-[11px] sm:text-xs text-amber-200 tracking-wider font-medium mb-2.5 backdrop-blur-sm shadow-sm">
         <i class="fas fa-sparkles text-amber-400 text-[10px]"></i>
         <span>Made with all my heart for Aishwarya</span>
       </div>
 
       <!-- Main Heading with Golden Calligraphy -->
       <div class="mb-1 overflow-visible">
-        <h1 class="font-romantic text-3xl sm:text-4xl md:text-[40px] text-gradient-gold tracking-wide drop-shadow-md pb-1 leading-tight">Hey, you.</h1>
+        <h1
+          class="font-romantic text-3xl sm:text-4xl md:text-[40px] text-gradient-gold tracking-wide drop-shadow-md pb-1 leading-tight">
+          Hey, you.</h1>
       </div>
-      
+
       <!-- Romantic Subtitle in handwriting script -->
       <p class="font-handwriting text-lg sm:text-xl text-amber-100/90 mb-2.5 leading-snug">
         "Yes, you... my favorite thought every single day."
       </p>
 
       <!-- Poetic Love Message -->
-      <div class="space-y-1.5 max-w-xs sm:max-w-sm mx-auto mb-4 text-amber-100/85 font-light text-xs sm:text-sm leading-relaxed">
+      <div
+        class="space-y-1.5 max-w-xs sm:max-w-sm mx-auto mb-4 text-amber-100/85 font-light text-xs sm:text-sm leading-relaxed">
         <p>
-          I made something special just for you. A quiet little corner of the universe, woven entirely from my favorite memories of us.
+          I made something special just for you. A quiet little corner of the universe, woven entirely from my favorite
+          memories of us.
         </p>
         <div class="flex items-center justify-center gap-2 py-0.5 text-amber-400/60 text-xs">
           <span>✦</span> <span>♡</span> <span>✦</span>
@@ -100,85 +116,100 @@
       </div>
 
       <!-- Romantic Enter Button -->
-      <button id="enter-universe-btn" type="button" class="btn-romantic-enter group font-bold text-xs sm:text-sm px-6 py-2.5 sm:px-7 sm:py-3 rounded-full flex items-center gap-2.5 mx-auto tracking-wider shadow-xl cursor-pointer">
+      <button id="enter-universe-btn" type="button"
+        class="btn-romantic-enter group font-bold text-xs sm:text-sm px-6 py-2.5 sm:px-7 sm:py-3 rounded-full flex items-center gap-2.5 mx-auto tracking-wider shadow-xl cursor-pointer">
         <span class="flex items-center gap-2">
           <span>LET'S BEGIN OUR JOURNEY</span>
-          <i class="fas fa-arrow-right text-xs text-slate-900 group-hover:translate-x-1 transition-transform duration-300"></i>
+          <i
+            class="fas fa-arrow-right text-xs text-slate-900 group-hover:translate-x-1 transition-transform duration-300"></i>
         </span>
       </button>
-
-      <!-- Music Notification with Floating Headphone & Notes -->
-      <div class="mt-3 flex items-center justify-center gap-2 text-[11px] sm:text-xs text-amber-300/75 font-light">
-        <i class="fas fa-headphones text-amber-400 text-[11px]"></i>
-        <span>Turn sound on — our music begins the moment you enter 🎵</span>
-      </div>
     </div>
   </div>
 
   <!-- =========================================================================
        THE 9-BOX MEMORY PICTURE PUZZLE GATE (3x3 Grid)
        ========================================================================= -->
-  <div id="puzzle-gate" class="fixed inset-0 z-[1100] hidden flex-col items-center justify-center p-3 sm:p-6 overflow-y-auto">
-    <div class="max-w-md w-full text-center romantic-puzzle-card p-4 sm:p-6 relative z-10 my-auto animate-fade-in shadow-2xl">
-      
+  <div id="puzzle-gate"
+    class="fixed inset-0 z-[1100] hidden flex-col items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div
+      class="max-w-md w-full text-center romantic-puzzle-card p-4 sm:p-6 relative z-10 my-auto animate-fade-in shadow-2xl">
+
       <!-- Romantic Crest Badge -->
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-amber-400/30 text-[11px] sm:text-xs text-amber-200 tracking-wider font-medium mb-2 shadow-sm">
+      <div
+        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-amber-400/30 text-[11px] sm:text-xs text-amber-200 tracking-wider font-medium mb-2 shadow-sm">
         <i class="fas fa-puzzle-piece text-amber-400 text-[10px]"></i>
         <span id="puzzle-badge-text">Memory Key • Piece Together Our Picture</span>
       </div>
 
       <!-- Puzzle Title -->
-      <h2 id="puzzle-title" class="font-romantic text-2xl sm:text-3xl text-gradient-gold font-bold mb-0.5">Piece Together Our Picture</h2>
+      <h2 id="puzzle-title" class="font-romantic text-2xl sm:text-3xl text-gradient-gold font-bold mb-0.5">Piece
+        Together Our Picture</h2>
       <p id="puzzle-subtitle" class="font-handwriting text-base sm:text-lg text-amber-100/90 mb-2.5">
-        "Slide the 8 tiles into the empty space to complete our picture ✨"
+        "Slide the tiles into empty space to complete our picture✨"
       </p>
 
       <!-- Action & Stats Bar -->
-      <div id="puzzle-stats-bar" class="flex items-center justify-between max-w-xs sm:max-w-sm mx-auto mb-2.5 px-1 text-xs text-amber-200/80">
+      <div id="puzzle-stats-bar"
+        class="flex items-center justify-between max-w-xs sm:max-w-sm mx-auto mb-2.5 px-1 text-xs text-amber-200/80">
         <div class="flex items-center gap-1.5">
           <span class="px-2.5 py-0.5 rounded-full bg-amber-900/40 border border-amber-400/20 font-mono text-[11px]">
             Moves: <strong id="puzzle-moves-count" class="text-amber-300">0</strong>
           </span>
         </div>
         <div class="flex items-center gap-1.5">
-          <button id="toggle-peek-btn" type="button" class="px-2.5 py-0.5 rounded-full bg-amber-900/40 hover:bg-amber-800/60 border border-amber-400/30 text-amber-200 text-[11px] transition flex items-center gap-1 cursor-pointer" title="View completed picture preview">
+          <button id="toggle-peek-btn" type="button"
+            class="px-2.5 py-0.5 rounded-full bg-amber-900/40 hover:bg-amber-800/60 border border-amber-400/30 text-amber-200 text-[11px] transition flex items-center gap-1 cursor-pointer"
+            title="View completed picture preview">
             <i class="fas fa-eye text-amber-400 text-[10px]"></i> <span>Peek</span>
           </button>
-          <button id="toggle-numbers-btn" type="button" class="px-2.5 py-0.5 rounded-full bg-amber-900/40 hover:bg-amber-800/60 border border-amber-400/30 text-amber-200 text-[11px] transition flex items-center gap-1 cursor-pointer" title="Show or hide piece guide numbers">
+          <button id="toggle-numbers-btn" type="button"
+            class="px-2.5 py-0.5 rounded-full bg-amber-900/40 hover:bg-amber-800/60 border border-amber-400/30 text-amber-200 text-[11px] transition flex items-center gap-1 cursor-pointer"
+            title="Show or hide piece guide numbers">
             <i class="fas fa-hashtag text-amber-400 text-[10px]"></i> <span>Numbers</span>
           </button>
         </div>
       </div>
 
       <!-- Reference Peek Drawer / Modal (Hidden by default) -->
-      <div id="puzzle-peek-preview" class="hidden mb-2.5 p-2 rounded-xl bg-black/80 border border-amber-400/40 max-w-[200px] mx-auto animate-fade-in shadow-2xl">
+      <div id="puzzle-peek-preview"
+        class="hidden mb-2.5 p-2 rounded-xl bg-black/80 border border-amber-400/40 max-w-[200px] mx-auto animate-fade-in shadow-2xl">
         <div class="flex items-center justify-between mb-1.5">
           <span class="text-[11px] text-amber-300 font-medium">Target Picture:</span>
-          <button id="close-peek-btn" type="button" class="text-amber-400 hover:text-white text-xs px-1"><i class="fas fa-times"></i></button>
+          <button id="close-peek-btn" type="button" class="text-amber-400 hover:text-white text-xs px-1"><i
+              class="fas fa-times"></i></button>
         </div>
-        <img src="img/imagees.jpg" alt="Target Preview" class="w-full aspect-square object-cover rounded-lg border border-amber-400/30 shadow-inner">
+        <img src="img/imagees.jpg" alt="Target Preview"
+          class="w-full aspect-square object-cover rounded-lg border border-amber-400/30 shadow-inner">
       </div>
 
       <!-- The 3x3 Puzzle Board Container (8 sliding tiles + 1 blank space) -->
       <div class="puzzle-board-wrapper mx-auto mb-2">
-        <div id="puzzle-board" class="puzzle-grid grid grid-cols-3 grid-rows-3 gap-1 sm:gap-1.5 p-1.5 bg-black/50 rounded-xl border border-amber-400/30 shadow-2xl">
+        <div id="puzzle-board"
+          class="puzzle-grid grid grid-cols-3 grid-rows-3 gap-1 sm:gap-1.5 p-1.5 bg-black/50 rounded-xl border border-amber-400/30 shadow-2xl">
           <!-- 8 sliding tiles + 1 empty space injected by JS -->
         </div>
       </div>
 
       <!-- Helper Instructions & Subtle Auto-Solve Bypass -->
-      <div id="puzzle-helper-row" class="flex items-center justify-between max-w-xs sm:max-w-sm mx-auto pt-0.5 text-[11px] text-amber-300/70">
+      <div id="puzzle-helper-row"
+        class="flex items-center justify-between max-w-xs sm:max-w-sm mx-auto pt-0.5 text-[11px] text-amber-300/70">
         <span>💡 Tap an adjacent tile to slide into the space!</span>
-        <button id="auto-solve-btn" type="button" class="hover:text-amber-200 underline transition cursor-pointer text-[11px]" title="Auto-complete the puzzle">
+        <button id="auto-solve-btn" type="button"
+          class="hover:text-amber-200 underline transition cursor-pointer text-[11px]" title="Auto-complete the puzzle">
           Auto Solve
         </button>
       </div>
 
       <!-- Victory Reveal Banner (Shown on Solve) -->
-      <div id="puzzle-victory-banner" class="hidden mt-3 p-3 rounded-xl bg-gradient-to-r from-amber-500/20 via-yellow-500/25 to-amber-500/20 border border-amber-400/50 animate-fade-in">
-        <h3 class="font-romantic text-xl sm:text-2xl text-gradient-gold font-bold mb-0.5">🎉 You Completed Our Picture!</h3>
-        <p class="font-handwriting text-sm sm:text-base text-amber-200 mb-2">Our entire world is now unlocked for you, my love 💖</p>
-        <button id="puzzle-continue-btn" type="button" class="btn-rose-shimmer font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full inline-flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer">
+      <div id="puzzle-victory-banner"
+        class="hidden mt-3 p-3 rounded-xl bg-gradient-to-r from-amber-500/20 via-yellow-500/25 to-amber-500/20 border border-amber-400/50 animate-fade-in">
+        <h3 class="font-romantic text-xl sm:text-2xl text-gradient-gold font-bold mb-0.5">🎉 You Completed Our Picture!
+        </h3>
+        <p class="font-handwriting text-sm sm:text-base text-amber-200 mb-2">Our entire world is now unlocked for you,
+          my love 💖</p>
+        <button id="puzzle-continue-btn" type="button"
+          class="btn-rose-shimmer font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full inline-flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer">
           <span>STEP INSIDE OUR STORY</span> <i class="fas fa-arrow-right text-xs"></i>
         </button>
       </div>
@@ -189,62 +220,91 @@
   <!-- =========================================================================
        MAIN NARRATIVE CONTENT CONTAINER (Strictly Hidden until Puzzle is Solved)
        ========================================================================= -->
-  <main id="main-content" class="hidden relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20 space-y-24 sm:space-y-36">
+  <main id="main-content"
+    class="hidden relative z-10 max-w-5xl mx-auto px-3 sm:px-6 pt-3 sm:pt-4 pb-4">
 
     <!-- =========================================================================
          ACT 1: THE BEGINNING & LIVE RELATIONSHIP TIMER
          ========================================================================= -->
-    <section id="the-beginning" class="text-center pt-2 sm:pt-4">
-      <div class="badge-pill-container mb-1.5">
-        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-card-subtle text-xs text-amber-200 border border-amber-400/30">
+    <section id="the-beginning" class="text-center w-full">
+      <div class="badge-pill-container mb-1">
+        <div
+          class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full glass-card-subtle text-[11px] sm:text-xs text-amber-200 border border-amber-400/30">
           <i class="fas fa-infinity text-amber-400"></i> Where Our Stars Aligned
         </div>
       </div>
-      <h2 class="font-serif-title text-2xl sm:text-4xl text-gradient-rose mb-1 block">Us, Through Every Second</h2>
-      <p class="text-[11px] sm:text-xs uppercase tracking-widest text-amber-200/75 mb-3 font-medium">Counting every heartbeat since January 3, 2025</p>
+      <h2 class="font-serif-title text-xl sm:text-2xl md:text-3xl text-gradient-rose mb-0.5 block">Us, Through Every Second</h2>
+      <p class="text-[10px] sm:text-xs uppercase tracking-widest text-amber-200/75 mb-2 font-medium">Counting every heartbeat since January 3, 2025</p>
 
-      <!-- Live Counter Grid (Compact 4-Column Bar) -->
-      <div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-sm sm:max-w-md mx-auto mb-3">
-        <div class="glass-card p-2 sm:p-2.5 text-center border-t-2 border-amber-400/50 rounded-xl">
-          <span id="counter-days" class="block font-serif-title text-xl sm:text-2xl text-gradient-rose font-bold">00</span>
-          <span class="text-[10px] uppercase tracking-wider text-amber-200/70 block">Days</span>
+      <!-- Live Counter Grid (Box 1: Compact 4-Column Bar) -->
+      <!-- Live Counter Grid (Box 1: Aligned with Box 2, matching prologue presence) -->
+      <div id="counter-grid-box" class="grid grid-cols-4 gap-2 sm:gap-3 max-w-[440px] sm:max-w-[480px] w-full mx-auto mb-3 sm:mb-4">
+        <div class="glass-card p-2.5 sm:p-3 text-center border-t-2 border-amber-400/50 rounded-xl shadow-lg">
+          <span id="counter-days"
+            class="block font-serif-title text-xl sm:text-2xl text-gradient-rose font-bold">00</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider text-amber-200/75 block font-medium mt-0.5">Days</span>
         </div>
-        <div class="glass-card p-2 sm:p-2.5 text-center border-t-2 border-amber-400/50 rounded-xl">
-          <span id="counter-hours" class="block font-serif-title text-xl sm:text-2xl text-gradient-rose font-bold">00</span>
-          <span class="text-[10px] uppercase tracking-wider text-amber-200/70 block">Hours</span>
+        <div class="glass-card p-2.5 sm:p-3 text-center border-t-2 border-amber-400/50 rounded-xl shadow-lg">
+          <span id="counter-hours"
+            class="block font-serif-title text-xl sm:text-2xl text-gradient-rose font-bold">00</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider text-amber-200/75 block font-medium mt-0.5">Hours</span>
         </div>
-        <div class="glass-card p-2 sm:p-2.5 text-center border-t-2 border-amber-400/50 rounded-xl">
-          <span id="counter-minutes" class="block font-serif-title text-xl sm:text-2xl text-gradient-rose font-bold">00</span>
-          <span class="text-[10px] uppercase tracking-wider text-amber-200/70 block">Minutes</span>
+        <div class="glass-card p-2.5 sm:p-3 text-center border-t-2 border-amber-400/50 rounded-xl shadow-lg">
+          <span id="counter-minutes"
+            class="block font-serif-title text-xl sm:text-2xl text-gradient-rose font-bold">00</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider text-amber-200/75 block font-medium mt-0.5">Minutes</span>
         </div>
-        <div class="glass-card p-2 sm:p-2.5 text-center border-t-2 border-amber-400/50 rounded-xl">
-          <span id="counter-seconds" class="block font-serif-title text-xl sm:text-2xl text-gradient-rose font-bold">00</span>
-          <span class="text-[10px] uppercase tracking-wider text-amber-200/70 block">Seconds</span>
+        <div class="glass-card p-2.5 sm:p-3 text-center border-t-2 border-amber-400/50 rounded-xl shadow-lg">
+          <span id="counter-seconds"
+            class="block font-serif-title text-xl sm:text-2xl text-gradient-rose font-bold">00</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider text-amber-200/75 block font-medium mt-0.5">Seconds</span>
         </div>
       </div>
 
-      <!-- Polaroid Memory Spotlight & Interactive Yes/No Gate Card -->
-      <div id="question-card" class="max-w-xs sm:max-w-sm mx-auto glass-card p-3 sm:p-4 rounded-2xl shadow-2xl border border-amber-400/40 relative">
-        <div class="relative overflow-hidden rounded-xl bg-black/40 w-20 h-20 sm:w-24 sm:h-24 mx-auto flex items-center justify-center border border-amber-400/30 mb-2 shadow-inner">
-          <img id="ask-cat-img" src="img/momo-the-cat-momo.gif" alt="Do you like me?" class="w-full h-full object-cover">
-        </div>
-        <p id="ask-question-text" class="font-handwriting text-lg sm:text-xl text-amber-100 text-center leading-snug mb-3">
-          "Be honest... do you like me? 🥺👉👈"
-        </p>
-
-        <!-- Interactive Yes Action Area (Yes Only) -->
-        <div id="ask-buttons-wrap" class="relative flex items-center justify-center min-h-[48px] py-1">
-          <button id="ask-yes-btn" type="button" class="btn-rose-shimmer font-bold text-sm sm:text-base px-8 py-2.5 rounded-full flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer">
-            <span>YES! 💖</span>
-          </button>
+      <!-- Memory Spotlight & Interactive Gate Card (Box 2: Generous size matching prologue card, big gif/image) -->
+      <div id="question-card"
+        class="max-w-[440px] sm:max-w-[480px] w-full mx-auto glass-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl border border-amber-400/40 relative flex flex-col justify-between h-[300px] sm:h-[360px]">
+        
+        <!-- Big Gif / Image Box -->
+        <div
+          class="relative overflow-hidden rounded-2xl bg-black/40 w-32 h-32 sm:w-40 sm:h-40 mx-auto flex items-center justify-center border-2 border-amber-400/50 mb-2 shadow-[0_0_25px_rgba(245,158,11,0.3)] shrink-0">
+          <img id="ask-cat-img" src="img/ready-for-memories.jpg" alt="Are you ready to step into our memories?"
+            class="w-full h-full object-cover transition-all duration-500 hover:scale-105">
         </div>
 
-        <!-- Success Message (Revealed upon clicking Yes) -->
-        <div id="ask-success-msg" class="hidden text-center py-1 animate-fade-in">
-          <span class="inline-block px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-400/30 text-xs sm:text-sm font-semibold mb-1">
-            🎉 YAYYY! I knew it! 🥰
-          </span>
-          <p class="text-xs text-amber-200/80 italic">Scroll down, our whole story is now unlocked for you ✨</p>
+        <!-- Question Text Container -->
+        <div class="h-[56px] sm:h-[64px] flex items-center justify-center my-1 px-3 shrink-0">
+          <p id="ask-question-text"
+            class="font-handwriting text-xl sm:text-2xl text-amber-100 text-center leading-snug transition-opacity duration-300">
+            "Are you ready to step into our world of memories? ✨"
+          </p>
+        </div>
+
+        <!-- Bottom Action/Message Container -->
+        <div class="h-[58px] sm:h-[66px] flex items-center justify-center relative w-full pt-1 shrink-0">
+          <!-- Interactive Yes Action Area (Yes Only) -->
+          <div id="ask-buttons-wrap" class="w-full flex items-center justify-center transition-opacity duration-300">
+            <button id="ask-yes-btn" type="button"
+              class="btn-rose-shimmer font-bold text-sm sm:text-base px-8 py-2.5 sm:py-3 rounded-full flex items-center gap-2 shadow-2xl hover:scale-105 active:scale-95 transition-all cursor-pointer tracking-wide">
+              <span>YES, I'M READY! 💖</span>
+            </button>
+          </div>
+
+          <!-- Success Message (Revealed upon clicking Yes) -->
+          <div id="ask-success-msg" class="hidden w-full text-center animate-fade-in flex items-center justify-center">
+            <span
+              class="inline-block px-5 py-2 rounded-full bg-amber-500/20 text-amber-300 border border-amber-400/40 text-sm sm:text-base font-semibold shadow-sm">
+              ✨ Welcome to our story, my love 💖
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gentle Scroll Down Indicator (Revealed only after clicking Yes) -->
+      <div id="hero-scroll-indicator" class="hidden opacity-0 transition-opacity duration-700 mt-6 sm:mt-10 text-center pointer-events-none">
+        <div class="inline-flex flex-col items-center gap-1.5 text-amber-200/75 animate-bounce">
+          <span class="text-[10px] sm:text-xs tracking-[0.2em] uppercase font-light">Scroll down to explore our memories</span>
+          <i class="fas fa-chevron-down text-xs text-amber-400"></i>
         </div>
       </div>
     </section>
@@ -252,814 +312,1157 @@
     <!-- =========================================================================
          UNLOCKED STORY CONTENT (Only revealed after clicking "YES! 💖" above)
          ========================================================================= -->
-    <div id="unlocked-story-content" class="hidden opacity-0 transition-opacity duration-1000 space-y-24 sm:space-y-36">
+    <div id="unlocked-story-content" class="hidden opacity-0 transition-opacity duration-1000 space-y-24 sm:space-y-36 pt-16 sm:pt-24">
 
-    <!-- =========================================================================
+      <!-- =========================================================================
          THINGS I NEVER TOLD YOU (3D INTERACTIVE FLIP CARDS)
          ========================================================================= -->
-    <section id="things-never-told" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-lock-open text-pink-400 mr-2"></i> Unspoken Thoughts
+      <section id="things-never-told" data-aos="fade-up">
+        <div class="text-center mb-12">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-lock-open text-pink-400 mr-2"></i> Unspoken Thoughts
+            </div>
           </div>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Things I Never Told You</h2>
+          <p class="text-pink-100/70 text-sm sm:text-base">Click on each card to unlock a memory I kept close to my
+            heart.</p>
         </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Things I Never Told You</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Click on each card to unlock a memory I kept close to my heart.</p>
-      </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 perspective-container">
-        
-        <!-- Card 1 -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-300 text-2xl mb-4 border border-pink-400/30">
-                <i class="fas fa-eye"></i>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 perspective-container">
+
+          <!-- Card 1 -->
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div
+                  class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-300 text-2xl mb-4 border border-pink-400/30">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <h3 class="font-serif-title text-xl text-pink-100 mb-2">The Exact Moment</h3>
+                <p class="text-xs text-pink-200/60 uppercase tracking-widest mt-auto">Click to reveal secret ↻</p>
               </div>
-              <h3 class="font-serif-title text-xl text-pink-100 mb-2">The Exact Moment</h3>
-              <p class="text-xs text-pink-200/60 uppercase tracking-widest mt-auto">Click to reveal secret ↻</p>
-            </div>
-            <div class="flip-card-back">
-              <div class="text-pink-300 text-2xl mb-3"><i class="fas fa-quote-left"></i></div>
-              <p class="font-handwriting text-xl sm:text-2xl text-pink-100 leading-relaxed">
-                The moment you laughed until your nose crinkled and you covered your face... that was the second I knew I was done for.
-              </p>
-              <span class="text-xs text-pink-400/80 mt-4 tracking-wider">— completely smitten</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-300 text-2xl mb-4 border border-pink-400/30">
-                <i class="fas fa-coffee"></i>
+              <div class="flip-card-back">
+                <div class="text-pink-300 text-2xl mb-3"><i class="fas fa-quote-left"></i></div>
+                <p class="font-handwriting text-xl sm:text-2xl text-pink-100 leading-relaxed">
+                  When you tell me about your day. And if something hurt you & maine agr bola, ki "awww! mere bacche ko
+                  maaraa peetaa?"
+                  The Reaction of yours is priceless.
+                </p>
+                <span class="text-xs text-pink-400/80 mt-4 tracking-wider">— completely overwhelmed</span>
               </div>
-              <h3 class="font-serif-title text-xl text-pink-100 mb-2">That Random Tuesday</h3>
-              <p class="text-xs text-pink-200/60 uppercase tracking-widest mt-auto">Click to reveal secret ↻</p>
-            </div>
-            <div class="flip-card-back">
-              <div class="text-pink-300 text-2xl mb-3"><i class="fas fa-quote-left"></i></div>
-              <p class="font-handwriting text-xl sm:text-2xl text-pink-100 leading-relaxed">
-                We were doing absolutely nothing special — just sitting together. But I caught myself thinking: "I want this quiet forever."
-              </p>
-              <span class="text-xs text-pink-400/80 mt-4 tracking-wider">— core memory</span>
             </div>
           </div>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-300 text-2xl mb-4 border border-pink-400/30">
-                <i class="fas fa-hands-holding-heart"></i>
+          <!-- Card 2 -->
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div
+                  class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-300 text-2xl mb-4 border border-pink-400/30">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <h3 class="font-serif-title text-xl text-pink-100 mb-2">That Random Tuesday</h3>
+                <p class="text-xs text-pink-200/60 uppercase tracking-widest mt-auto">Click to reveal secret ↻</p>
               </div>
-              <h3 class="font-serif-title text-xl text-pink-100 mb-2">My Favorite Habit</h3>
-              <p class="text-xs text-pink-200/60 uppercase tracking-widest mt-auto">Click to reveal secret ↻</p>
-            </div>
-            <div class="flip-card-back">
-              <div class="text-pink-300 text-2xl mb-3"><i class="fas fa-quote-left"></i></div>
-              <p class="font-handwriting text-xl sm:text-2xl text-pink-100 leading-relaxed">
-                The way you tell stories with your hands moving everywhere and your eyes glowing. I could listen to you talk about literally anything.
-              </p>
-              <span class="text-xs text-pink-400/80 mt-4 tracking-wider">— mesmerizing every time</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-300 text-2xl mb-4 border border-pink-400/30">
-                <i class="fas fa-moon"></i>
+              <div class="flip-card-back">
+                <div class="text-pink-300 text-2xl mb-3"><i class="fas fa-quote-left"></i></div>
+                <p class="font-handwriting text-xl sm:text-2xl text-pink-100 leading-relaxed">
+                  We were doing absolutely nothing special — just sitting together. But I caught myself thinking: "I
+                  want this quiet forever."
+                </p>
+                <span class="text-xs text-pink-400/80 mt-4 tracking-wider">— core memory</span>
               </div>
-              <h3 class="font-serif-title text-xl text-pink-100 mb-2">When You're Quiet</h3>
-              <p class="text-xs text-pink-200/60 uppercase tracking-widest mt-auto">Click to reveal secret ↻</p>
-            </div>
-            <div class="flip-card-back">
-              <div class="text-pink-300 text-2xl mb-3"><i class="fas fa-quote-left"></i></div>
-              <p class="font-handwriting text-xl sm:text-2xl text-pink-100 leading-relaxed">
-                Whenever you lean against my shoulder and doze off, I hold my breath because I never want to break that sense of peace.
-              </p>
-              <span class="text-xs text-pink-400/80 mt-4 tracking-wider">— pure warmth</span>
             </div>
           </div>
+
+          <!-- Card 3 -->
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div
+                  class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-300 text-2xl mb-4 border border-pink-400/30">
+                  <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3 class="font-serif-title text-xl text-pink-100 mb-2">My Favorite Habit</h3>
+                <p class="text-xs text-pink-200/60 uppercase tracking-widest mt-auto">Click to reveal secret ↻</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="text-pink-300 text-2xl mb-3"><i class="fas fa-quote-left"></i></div>
+                <p class="font-handwriting text-xl sm:text-2xl text-pink-100 leading-relaxed">
+                  The way you tell stories with your hands moving everywhere and your eyes glowing. I could listen to
+                  you talk about literally anything.
+                </p>
+                <span class="text-xs text-pink-400/80 mt-4 tracking-wider">— mesmerizing every time</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div
+                  class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-300 text-2xl mb-4 border border-pink-400/30">
+                  <i class="fas fa-moon"></i>
+                </div>
+                <h3 class="font-serif-title text-xl text-pink-100 mb-2">When You're Quiet</h3>
+                <p class="text-xs text-pink-200/60 uppercase tracking-widest mt-auto">Click to reveal secret ↻</p>
+              </div>
+              <div class="flip-card-back">
+                <div class="text-pink-300 text-2xl mb-3"><i class="fas fa-quote-left"></i></div>
+                <p class="font-handwriting text-xl sm:text-2xl text-pink-100 leading-relaxed">
+                  Whenever you lean against my shoulder and doze off, I hold my breath because I never want to break
+                  that sense of peace.
+                </p>
+                <span class="text-xs text-pink-400/80 mt-4 tracking-wider">— pure warmth</span>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!-- =========================================================================
+      <!-- =========================================================================
          ACT 3: OUR JOURNEY & MEMORY TIMELINE
          ========================================================================= -->
-    <section id="timeline" data-aos="fade-up">
-      <div class="text-center mb-16">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-route text-pink-400 mr-2"></i> Our Milestones
-          </div>
-        </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Chapters in the Making</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Every memory etched into the story only we get to share.</p>
-      </div>
-
-      <div class="timeline-stem max-w-4xl mx-auto space-y-16">
-        
-        <!-- Milestone 1 -->
-        <div class="relative flex flex-col md:flex-row items-center gap-6 sm:gap-8" data-aos="fade-up">
-          <div class="md:w-1/2 md:text-right">
-            <span class="text-xs font-semibold uppercase tracking-widest text-pink-400">Chapter 1</span>
-            <h3 class="font-serif-title text-2xl sm:text-3xl text-pink-100 mt-1">Squishy Cheeks & Endless Smiles</h3>
-            <p class="text-pink-200/80 text-sm sm:text-base mt-2 leading-relaxed">
-              College days over, cheek-pulling banter, and that priceless smile! Dekhlo ekdum cute lag rahi ho 😊✨
-            </p>
-            <div class="mt-3 inline-block glass-card-subtle px-4 py-2 rounded-xl border border-pink-400/20 text-left">
-              <p class="font-handwriting text-lg text-pink-200">"Little did I know that one greeting was going to become my favorite person in the entire universe."</p>
+      <section id="timeline" data-aos="fade-up">
+        <div class="text-center mb-16">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-route text-pink-400 mr-2"></i> Our Milestones
             </div>
           </div>
-          <div class="w-10 h-10 rounded-full bg-pink-500 border-4 border-[#07020a] timeline-dot flex items-center justify-center text-white text-sm shrink-0 shadow-lg shadow-pink-500/50">
-            <i class="fas fa-smile"></i>
-          </div>
-          <div class="md:w-1/2 w-full">
-            <div class="glass-card p-3 rounded-2xl overflow-hidden group hover:border-pink-400/50 transition duration-500 shadow-xl">
-              <img src="img/img1.jpg" alt="Squishy Cheeks & Endless Smiles" loading="lazy" class="w-full max-h-72 sm:max-h-80 object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
-            </div>
-          </div>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Chapters in the Making</h2>
+          <p class="text-pink-100/70 text-sm sm:text-base">Every memory etched into the story only we get to share.</p>
         </div>
 
-        <!-- Milestone 2 -->
-        <div class="relative flex flex-col md:flex-row-reverse items-center gap-6 sm:gap-8" data-aos="fade-up">
-          <div class="md:w-1/2 md:text-left">
-            <span class="text-xs font-semibold uppercase tracking-widest text-pink-400">Chapter 2</span>
-            <h3 class="font-serif-title text-2xl sm:text-3xl text-pink-100 mt-1">Sweet Treats & Sweeter Company</h3>
-            <p class="text-pink-200/80 text-sm sm:text-base mt-2 leading-relaxed">
-              Ice cream runs, goofy candid moments, and the sweetest times together. You always turn simple hangouts into core memories! 🍨🍦
-            </p>
-            <div class="mt-3 inline-block glass-card-subtle px-4 py-2 rounded-xl border border-pink-400/20 text-left">
-              <p class="font-handwriting text-lg text-pink-200">"That moment I saw you lose your composure laughing... I was already hopelessly hooked."</p>
-            </div>
-          </div>
-          <div class="w-10 h-10 rounded-full bg-pink-500 border-4 border-[#07020a] timeline-dot flex items-center justify-center text-white text-sm shrink-0 shadow-lg shadow-pink-500/50">
-            <i class="fas fa-ice-cream"></i>
-          </div>
-          <div class="md:w-1/2 w-full">
-            <div class="glass-card p-3 rounded-2xl overflow-hidden group hover:border-pink-400/50 transition duration-500 shadow-xl">
-              <img src="img/img2.jpg" alt="Sweet Treats & Sweeter Company" loading="lazy" class="w-full max-h-72 sm:max-h-80 object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
-            </div>
-          </div>
-        </div>
+        <div class="timeline-stem max-w-4xl mx-auto space-y-16">
 
-        <!-- Milestone 3 -->
-        <div class="relative flex flex-col md:flex-row items-center gap-6 sm:gap-8" data-aos="fade-up">
-          <div class="md:w-1/2 md:text-right">
-            <span class="text-xs font-semibold uppercase tracking-widest text-pink-400">Chapter 3</span>
-            <h3 class="font-serif-title text-2xl sm:text-3xl text-pink-100 mt-1">Royal Mirror Aesthetics</h3>
-            <p class="text-pink-200/80 text-sm sm:text-base mt-2 leading-relaxed">
-              Leaning into palace grandeur with pure grace and style! Looking effortlessly stunning and chic in every single frame. 🪞✨
-            </p>
-            <div class="mt-3 inline-block glass-card-subtle px-4 py-2 rounded-xl border border-pink-400/20 text-left">
-              <p class="font-handwriting text-lg text-pink-200">"You turned candid mirror moments into the most royal memories in my gallery."</p>
-            </div>
-          </div>
-          <div class="w-10 h-10 rounded-full bg-pink-500 border-4 border-[#07020a] timeline-dot flex items-center justify-center text-white text-sm shrink-0 shadow-lg shadow-pink-500/50">
-            <i class="fas fa-crown"></i>
-          </div>
-          <div class="md:w-1/2 w-full">
-            <div class="glass-card p-3 rounded-2xl overflow-hidden group hover:border-pink-400/50 transition duration-500 shadow-xl">
-              <img src="img/img3.jpg" alt="Royal Mirror Aesthetics" loading="lazy" class="w-full max-h-72 sm:max-h-80 object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
-            </div>
-          </div>
-        </div>
-
-        <!-- Milestone 4 -->
-        <div class="relative flex flex-col md:flex-row-reverse items-center gap-6 sm:gap-8" data-aos="fade-up">
-          <div class="md:w-1/2 md:text-left">
-            <span class="text-xs font-semibold uppercase tracking-widest text-pink-400">Chapter 4</span>
-            <h3 class="font-serif-title text-2xl sm:text-3xl text-pink-100 mt-1">That Iconic Side-Eye!</h3>
-            <p class="text-pink-200/80 text-sm sm:text-base mt-2 leading-relaxed">
-              That priceless "kyu pareshan kr rha hai" look! The teasing never stops, the laughter never ends, and this bond only gets stronger. 👀🤍
-            </p>
-            <div class="mt-3 inline-block glass-card-subtle px-4 py-2 rounded-xl border border-pink-400/20 text-left">
-              <p class="font-handwriting text-lg text-pink-200">"And this is only the prologue. The best adventures are still waiting for us, my love."</p>
-            </div>
-          </div>
-          <div class="w-10 h-10 rounded-full bg-pink-500 border-4 border-[#07020a] timeline-dot flex items-center justify-center text-white text-sm shrink-0 shadow-lg shadow-pink-500/50">
-            <i class="fas fa-heart"></i>
-          </div>
-          <div class="md:w-1/2 w-full">
-            <div class="glass-card p-3 rounded-2xl overflow-hidden group hover:border-pink-400/50 transition duration-500 shadow-xl">
-              <img src="img/img4.jpg" alt="That Iconic Side-Eye" loading="lazy" class="w-full max-h-72 sm:max-h-80 object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =========================================================================
-         ALWAYS TOGETHER FOREVER (HORIZONTAL MEMORY CAROUSEL — SUTTAA PHOTOS)
-         ========================================================================= -->
-    <section id="always-together" data-aos="fade-up">
-      <div class="text-center mb-10">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-star text-pink-400 mr-2"></i> Unfiltered Snapshots
-          </div>
-        </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Always Together Forever</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Every version of you, every style, every moment — truly unforgettable.</p>
-      </div>
-
-      <div class="relative max-w-5xl mx-auto px-2 sm:px-4">
-        <!-- Scroll Buttons for Desktop -->
-        <button id="scroll-left-btn" type="button" aria-label="Scroll left" class="hidden md:flex absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-pink-950/80 hover:bg-pink-900 border border-pink-400/40 items-center justify-center text-pink-200 shadow-2xl transition-all hover:scale-110 cursor-pointer">
-          <i class="fas fa-chevron-left text-sm"></i>
-        </button>
-        <button id="scroll-right-btn" type="button" aria-label="Scroll right" class="hidden md:flex absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-pink-950/80 hover:bg-pink-900 border border-pink-400/40 items-center justify-center text-pink-200 shadow-2xl transition-all hover:scale-110 cursor-pointer">
-          <i class="fas fa-chevron-right text-sm"></i>
-        </button>
-
-        <!-- Horizontal Scrollable Container -->
-        <div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide py-4 px-1 gap-4 sm:gap-6">
-          
-          <!-- Card 1: Saree -->
-          <div class="snap-center flex-shrink-0 w-[78vw] sm:w-[46vw] md:w-[32vw] lg:w-[260px]">
-            <div class="glass-card p-4 rounded-2xl h-full flex flex-col justify-between group hover:border-pink-400/60 transition duration-300">
-              <div class="overflow-hidden rounded-xl mb-3 aspect-[3/4] bg-pink-950/40">
-                <img src="img/image1.jpg" alt="Saree" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <!-- Milestone 1 -->
+          <div class="relative flex flex-col md:flex-row items-center gap-6 sm:gap-8" data-aos="fade-up">
+            <div class="md:w-1/2 md:text-right">
+              <span class="text-xs font-semibold uppercase tracking-widest text-pink-400">Chapter 1</span>
+              <h3 class="font-serif-title text-2xl sm:text-3xl text-pink-100 mt-1">That Gorgeous Red Dress</h3>
+              <div class="mt-4 inline-block glass-card-subtle px-5 py-3 rounded-2xl border border-pink-400/20 text-left">
+                <p class="font-handwriting text-lg sm:text-xl text-pink-200 leading-relaxed">"You bought this red dress recently, and the moment I saw you in it, you took my breath away. Sitting right next to you, feeling your presence so close, my heart was racing the entire time."</p>
               </div>
-              <div class="text-center">
-                <h3 class="font-serif-title text-xl text-pink-100 font-semibold">Saree</h3>
-                <p class="font-handwriting text-base sm:text-lg text-pink-200/90 mt-1">"Desi elegance at its best! Saree mein ekdum royal ✨"</p>
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-pink-500 border-4 border-[#07020a] timeline-dot flex items-center justify-center text-white text-sm shrink-0 shadow-lg shadow-pink-500/50">
+              <i class="fas fa-heart text-pink-200"></i>
+            </div>
+            <div class="md:w-1/2 w-full">
+              <div
+                class="glass-card p-3 rounded-2xl overflow-hidden group hover:border-pink-400/50 transition duration-500 shadow-xl">
+                <img src="img/img1.jpg" alt="That Gorgeous Red Dress" loading="lazy"
+                  class="w-full max-h-72 sm:max-h-80 object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
               </div>
             </div>
           </div>
 
-          <!-- Card 2: Kurta -->
-          <div class="snap-center flex-shrink-0 w-[78vw] sm:w-[46vw] md:w-[32vw] lg:w-[260px]">
-            <div class="glass-card p-4 rounded-2xl h-full flex flex-col justify-between group hover:border-pink-400/60 transition duration-300">
-              <div class="overflow-hidden rounded-xl mb-3 aspect-[3/4] bg-pink-950/40">
-                <img src="img/image2.jpg" alt="Kurta" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <!-- Milestone 2 -->
+          <div class="relative flex flex-col md:flex-row-reverse items-center gap-6 sm:gap-8" data-aos="fade-up">
+            <div class="md:w-1/2 md:text-left">
+              <span class="text-xs font-semibold uppercase tracking-widest text-pink-400">Chapter 2</span>
+              <h3 class="font-serif-title text-2xl sm:text-3xl text-pink-100 mt-1">You &amp; Me Awkwardly Posing</h3>
+              <div class="mt-4 inline-block glass-card-subtle px-5 py-3 rounded-2xl border border-pink-400/20 text-left">
+                <p class="font-handwriting text-lg sm:text-xl text-pink-200 leading-relaxed">"Standing by the mall's balcony with you right by my side... In the middle of the crowd, I remember, we were trying to pose for the photo."</p>
               </div>
-              <div class="text-center">
-                <h3 class="font-serif-title text-xl text-pink-100 font-semibold">Kurta</h3>
-                <p class="font-handwriting text-base sm:text-lg text-pink-200/90 mt-1">"Paparazzi alert! No photos please, superstar in the house 😂💅"</p>
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-pink-500 border-4 border-[#07020a] timeline-dot flex items-center justify-center text-white text-sm shrink-0 shadow-lg shadow-pink-500/50">
+              <i class="fas fa-city"></i>
+            </div>
+            <div class="md:w-1/2 w-full">
+              <div
+                class="glass-card p-3 rounded-2xl overflow-hidden group hover:border-pink-400/50 transition duration-500 shadow-xl">
+                <img src="img/img2.jpg" alt="City Lights & Your Sweet Laugh" loading="lazy"
+                  class="w-full max-h-72 sm:max-h-80 object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
               </div>
             </div>
           </div>
 
-          <!-- Card 3: Uniform -->
-          <div class="snap-center flex-shrink-0 w-[78vw] sm:w-[46vw] md:w-[32vw] lg:w-[260px]">
-            <div class="glass-card p-4 rounded-2xl h-full flex flex-col justify-between group hover:border-pink-400/60 transition duration-300">
-              <div class="overflow-hidden rounded-xl mb-3 aspect-[3/4] bg-pink-950/40">
-                <img src="img/image3.jpg" alt="Uniform" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <!-- Milestone 3 -->
+          <div class="relative flex flex-col md:flex-row items-center gap-6 sm:gap-8" data-aos="fade-up">
+            <div class="md:w-1/2 md:text-right">
+              <span class="text-xs font-semibold uppercase tracking-widest text-pink-400">Chapter 3</span>
+              <h3 class="font-serif-title text-2xl sm:text-3xl text-pink-100 mt-1">Your Head on My Shoulder</h3>
+              <div class="mt-4 inline-block glass-card-subtle px-5 py-3 rounded-2xl border border-pink-400/20 text-left">
+                <p class="font-handwriting text-lg sm:text-xl text-pink-200 leading-relaxed">"Having your head resting so gently on my shoulder & you looking up at me with all that pure love and care in your eyes... In that quiet moment, feeling you so close and seeing how deeply you love me, my heart completely melted. There is no sweeter place in this world."</p>
               </div>
-              <div class="text-center">
-                <h3 class="font-serif-title text-xl text-pink-100 font-semibold">Uniform</h3>
-                <p class="font-handwriting text-base sm:text-lg text-pink-200/90 mt-1">"Lab coats on, study mode off! Best classroom partner 🩺📚"</p>
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-pink-500 border-4 border-[#07020a] timeline-dot flex items-center justify-center text-white text-sm shrink-0 shadow-lg shadow-pink-500/50">
+              <i class="fas fa-mug-hot"></i>
+            </div>
+            <div class="md:w-1/2 w-full">
+              <div
+                class="glass-card p-3 rounded-2xl overflow-hidden group hover:border-pink-400/50 transition duration-500 shadow-xl">
+                <img src="img/img3.jpg" alt="Your Head on My Shoulder" loading="lazy"
+                  class="w-full max-h-72 sm:max-h-80 object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
               </div>
             </div>
           </div>
 
-          <!-- Card 4: Dress -->
-          <div class="snap-center flex-shrink-0 w-[78vw] sm:w-[46vw] md:w-[32vw] lg:w-[260px]">
-            <div class="glass-card p-4 rounded-2xl h-full flex flex-col justify-between group hover:border-pink-400/60 transition duration-300">
-              <div class="overflow-hidden rounded-xl mb-3 aspect-[3/4] bg-pink-950/40">
-                <img src="img/image4.jpg" alt="Dress" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              </div>
-              <div class="text-center">
-                <h3 class="font-serif-title text-xl text-pink-100 font-semibold">Dress</h3>
-                <p class="font-handwriting text-base sm:text-lg text-pink-200/90 mt-1">"Fairy lights and glowing smiles! Dressed to slay 🌃✨"</p>
+          <!-- Milestone 4 -->
+          <div class="relative flex flex-col md:flex-row-reverse items-center gap-6 sm:gap-8" data-aos="fade-up">
+            <div class="md:w-1/2 md:text-left">
+              <span class="text-xs font-semibold uppercase tracking-widest text-pink-400">Chapter 4</span>
+              <h3 class="font-serif-title text-2xl sm:text-3xl text-pink-100 mt-1">You, Wrapped Safely in My Arms</h3>
+              <div class="mt-4 inline-block glass-card-subtle px-5 py-3 rounded-2xl border border-pink-400/20 text-left">
+                <p class="font-handwriting text-lg sm:text-xl text-pink-200 leading-relaxed">"Holding you tight in my arms, smiling with our cheeks pressed together... That's my absolute favorite place in the universe — having you wrapped safely in my arms, where you belong forever."</p>
               </div>
             </div>
-          </div>
-
-          <!-- Card 5: Denim -->
-          <div class="snap-center flex-shrink-0 w-[78vw] sm:w-[46vw] md:w-[32vw] lg:w-[260px]">
-            <div class="glass-card p-4 rounded-2xl h-full flex flex-col justify-between group hover:border-pink-400/60 transition duration-300">
-              <div class="overflow-hidden rounded-xl mb-3 aspect-[3/4] bg-pink-950/40">
-                <img src="img/image5.jpg" alt="Denim" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              </div>
-              <div class="text-center">
-                <h3 class="font-serif-title text-xl text-pink-100 font-semibold">Denim</h3>
-                <p class="font-handwriting text-base sm:text-lg text-pink-200/90 mt-1">"Cold days, warm hugs & cozy winter vibes with you 🧥🤗"</p>
-              </div>
+            <div
+              class="w-10 h-10 rounded-full bg-pink-500 border-4 border-[#07020a] timeline-dot flex items-center justify-center text-white text-sm shrink-0 shadow-lg shadow-pink-500/50">
+              <i class="fas fa-heart"></i>
             </div>
-          </div>
-
-          <!-- Card 6: Casual -->
-          <div class="snap-center flex-shrink-0 w-[78vw] sm:w-[46vw] md:w-[32vw] lg:w-[260px]">
-            <div class="glass-card p-4 rounded-2xl h-full flex flex-col justify-between group hover:border-pink-400/60 transition duration-300">
-              <div class="overflow-hidden rounded-xl mb-3 aspect-[3/4] bg-pink-950/40">
-                <img src="img/image6.jpg" alt="Casual" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              </div>
-              <div class="text-center">
-                <h3 class="font-serif-title text-xl text-pink-100 font-semibold">Casual</h3>
-                <p class="font-handwriting text-base sm:text-lg text-pink-200/90 mt-1">"Pure comfort & unfiltered happiness. Just us being us 🌿💛"</p>
+            <div class="md:w-1/2 w-full">
+              <div
+                class="glass-card p-3 rounded-2xl overflow-hidden group hover:border-pink-400/50 transition duration-500 shadow-xl">
+                <img src="img/img4.jpg" alt="You, Wrapped Safe in My Arms" loading="lazy"
+                  class="w-full max-h-72 sm:max-h-80 object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
               </div>
             </div>
           </div>
 
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- =========================================================================
+      <!-- =========================================================================
          ACT 4: THE EVIDENCE / RELATIONSHIP ANALYTICS
          ========================================================================= -->
-    <section id="the-evidence" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-chart-pie text-pink-400 mr-2"></i> The Empirical Evidence
+      <section id="the-evidence" data-aos="fade-up">
+        <div class="text-center mb-12">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-chart-pie text-pink-400 mr-2"></i> The Empirical Evidence
+            </div>
           </div>
-        </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Relationship Analytics</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Scientific, mathematically verified proof of our dynamic.</p>
-      </div>
-
-      <div class="glass-card p-6 sm:p-10 max-w-3xl mx-auto space-y-6">
-        
-        <!-- Stat 1 -->
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-sm sm:text-base font-medium text-pink-100"><i class="fas fa-smile text-pink-400 mr-2"></i> Times You Made Me Smile</span>
-            <span class="text-sm font-bold text-pink-300 font-mono">∞ (Infinite)</span>
-          </div>
-          <div class="stat-bar-bg">
-            <div class="stat-bar-value" style="width: 100%;"></div>
-          </div>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Relationship Analytics</h2>
+          <p class="text-pink-100/70 text-sm sm:text-base">Scientific, mathematically verified proof of our dynamic.</p>
         </div>
 
-        <!-- Stat 2 -->
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-sm sm:text-base font-medium text-pink-100"><i class="fas fa-phone-slash text-pink-400 mr-2"></i> Times I Pretended Not to Miss You</span>
-            <span class="text-sm font-bold text-pink-300 font-mono">47 (Failed Every Time)</span>
+        <div class="glass-card p-6 sm:p-10 max-w-3xl mx-auto space-y-6">
+
+          <!-- Stat 1 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm sm:text-base font-medium text-pink-100"><i
+                  class="fas fa-smile text-pink-400 mr-2"></i> Times You Made Me Smile</span>
+              <span class="text-sm font-bold text-pink-300 font-mono">∞ (Infinite)</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-value" style="width: 100%;"></div>
+            </div>
           </div>
-          <div class="stat-bar-bg">
-            <div class="stat-bar-value" style="width: 47%;"></div>
+
+          <!-- Stat 2 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm sm:text-base font-medium text-pink-100"><i
+                  class="fas fa-phone-slash text-pink-400 mr-2"></i> Times I Pretended Not to Miss You</span>
+              <span class="text-sm font-bold text-pink-300 font-mono">27 (Failed Every Time)</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-value" style="width: 47%;"></div>
+            </div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm sm:text-base font-medium text-pink-100"><i
+                  class="fas fa-image text-pink-400 mr-2"></i> Times I Stared At Your Picture For No Reason</span>
+              <span class="text-sm font-bold text-pink-300 font-mono">[Server Overloaded]</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-value" style="width: 99%;"></div>
+            </div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm sm:text-base font-medium text-pink-100"><i
+                  class="fas fa-wand-magic-sparkles text-pink-400 mr-2"></i> Cuteness Quotient in Every Room You
+                Enter</span>
+              <span class="text-sm font-bold text-pink-300 font-mono">1,000% (Illegal levels)</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-value" style="width: 100%;"></div>
+            </div>
+          </div>
+
+          <!-- Stat 5 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm sm:text-base font-medium text-pink-100"><i
+                  class="fas fa-heart-pulse text-pink-400 mr-2"></i> Who Loves Who More Argument</span>
+              <span class="text-sm font-bold text-pink-300 font-mono">Bias Confirmed: Me</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-value" style="width: 95%;"></div>
+            </div>
+          </div>
+
+          <div class="pt-4 text-center border-t border-pink-500/20 text-xs text-pink-200/60 font-mono">
+            * Audited by the Supreme Department of Butterflies & Stolen Hoodies.
           </div>
         </div>
+      </section>
 
-        <!-- Stat 3 -->
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-sm sm:text-base font-medium text-pink-100"><i class="fas fa-image text-pink-400 mr-2"></i> Times I Stared At Your Picture For No Reason</span>
-            <span class="text-sm font-bold text-pink-300 font-mono">[Server Overloaded]</span>
+      <!-- =========================================================================
+         CANDID MOMENTS / EVERYDAY MAGIC (9 REAL CANDID PHOTOS)
+         ========================================================================= -->
+      <section id="candid-gallery" data-aos="fade-up">
+        <div class="text-center mb-10">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-sparkles text-pink-400 mr-2"></i> Candid &amp; Unfiltered
+            </div>
           </div>
-          <div class="stat-bar-bg">
-            <div class="stat-bar-value" style="width: 99%;"></div>
-          </div>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Everyday Magic With You</h2>
+          <p class="text-pink-100/75 text-sm sm:text-base max-w-2xl mx-auto">
+            From cozy blanket cocoons and silly burger dates to sleepy metro rides and saving lives in scrubs — every
+            candid side of you has my whole heart ✨
+          </p>
         </div>
 
-        <!-- Stat 4 -->
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-sm sm:text-base font-medium text-pink-100"><i class="fas fa-wand-magic-sparkles text-pink-400 mr-2"></i> Cuteness Quotient in Every Room You Enter</span>
-            <span class="text-sm font-bold text-pink-300 font-mono">1,000% (Illegal levels)</span>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 sm:gap-4 max-w-5xl mx-auto">
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/image1.jpg" alt="Masoom baccha" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Masoom Baccha 💤</span>
+            </div>
           </div>
-          <div class="stat-bar-bg">
-            <div class="stat-bar-value" style="width: 100%;"></div>
+
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/image2.jpg" alt="Blanket Cocoon" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Blanket Cocoon 🌯</span>
+            </div>
+          </div>
+
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/image3.jpg" alt="Effortlessly Radiant" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Effortlessly Radiant ✨</span>
+            </div>
+          </div>
+
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/image4.jpg" alt="Playful Curls" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Playful Curls 🌸</span>
+            </div>
+          </div>
+
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/image5.jpg" alt="Khane do please" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Khane Do Please 🍔</span>
+            </div>
+          </div>
+
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/image6.jpg" alt="Poolside Sunshine" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Poolside Sunshine 🌊</span>
+            </div>
+          </div>
+
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/image7.jpg" alt="Meadow Walks" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Meadow Walks 🌿</span>
+            </div>
+          </div>
+
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/image8.jpg" alt="Dhoop hai Hero" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Dhoop Hai Hero ☀️</span>
+            </div>
+          </div>
+
+          <div
+            class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative col-span-2 sm:col-span-1 max-sm:aspect-[16/9]">
+            <img src="img/image9.jpg" alt="Saviour Mode" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Saviour Mode 🩺</span>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Stat 5 -->
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-sm sm:text-base font-medium text-pink-100"><i class="fas fa-heart-pulse text-pink-400 mr-2"></i> Who Loves Who More Argument</span>
-            <span class="text-sm font-bold text-pink-300 font-mono">Bias Confirmed: Me</span>
-          </div>
-          <div class="stat-bar-bg">
-            <div class="stat-bar-value" style="width: 95%;"></div>
-          </div>
-        </div>
-
-        <div class="pt-4 text-center border-t border-pink-500/20 text-xs text-pink-200/60 font-mono">
-          * Audited by the Supreme Department of Butterflies & Stolen Hoodies.
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
+      <!-- =========================================================================
          ACT 5: THE RIGGED LOVE CALCULATOR (99.9999% COMPATIBILITY)
          ========================================================================= -->
-    <section id="love-calculator" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-calculator text-pink-400 mr-2"></i> Quantum Soulmate Computation
+      <section id="love-calculator" data-aos="fade-up">
+        <div class="text-center mb-12">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-calculator text-pink-400 mr-2"></i> Quantum Soulmate Computation
+            </div>
           </div>
-        </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Cosmic Love Calculator</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Testing our astrological, psychological, and soulmate compatibility.</p>
-      </div>
-
-      <div class="max-w-xl mx-auto glass-card p-6 sm:p-10 border border-pink-500/30 text-center">
-        <!-- Input Row -->
-        <div class="flex flex-col sm:flex-row items-center gap-4 mb-6">
-          <div class="w-full text-left">
-            <label class="block text-xs uppercase tracking-wider text-pink-300 mb-1">Your Name</label>
-            <input id="calc-name1" type="text" value="" placeholder="Enter your name..." class="w-full bg-pink-950/40 border border-pink-400/30 rounded-xl px-4 py-3 text-pink-100 placeholder-pink-300/40 focus:outline-none focus:border-pink-400 transition font-medium">
-          </div>
-          <div class="text-2xl text-pink-400 shrink-0 pt-4 sm:pt-6">
-            <i class="fas fa-heart animate-heartbeat"></i>
-          </div>
-          <div class="w-full text-left">
-            <label class="block text-xs uppercase tracking-wider text-pink-300 mb-1">Partner's Name</label>
-            <input id="calc-name2" type="text" value="" placeholder="Enter partner's name..." class="w-full bg-pink-950/40 border border-pink-400/30 rounded-xl px-4 py-3 text-pink-100 placeholder-pink-300/40 focus:outline-none focus:border-pink-400 transition font-medium">
-          </div>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Cosmic Love Calculator</h2>
+          <p class="text-pink-100/70 text-sm sm:text-base">Testing our astrological, psychological, and soulmate
+            compatibility.</p>
         </div>
 
-        <!-- Calculate Trigger Button -->
-        <button id="calc-trigger-btn" class="btn-rose-shimmer font-semibold px-8 py-3.5 rounded-full text-base sm:text-lg flex items-center gap-2 mx-auto mb-6">
-          <i class="fas fa-bolt"></i>
-          <span>Calculate Compatibility</span>
-        </button>
-
-        <!-- Dynamic Calculation Progress -->
-        <div id="calc-scanning-wrap" class="hidden space-y-3 mb-6">
-          <div class="calc-meter-track">
-            <div id="calc-meter-fill" class="calc-meter-fill"></div>
-          </div>
-          <p id="calc-status-text" class="text-xs sm:text-sm text-pink-200 font-mono animate-pulse">Initializing cosmic sensors...</p>
-        </div>
-
-        <!-- Result Card (Initially Hidden) -->
-        <div id="calc-result-box" class="hidden pt-6 border-t border-pink-500/20 animate-fade-in">
-          <div class="inline-block px-4 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs uppercase tracking-widest font-semibold mb-2">Verdict Verified</div>
-          <h3 class="font-serif-title text-5xl sm:text-6xl text-gradient-rose font-bold mb-2 text-glow">99.9999%</h3>
-          <p class="font-romantic text-2xl text-pink-200 mb-4">"Mathematically, Astronomically & Eternally Destined"</p>
-          
-          <div class="grid grid-cols-2 gap-3 text-left max-w-sm mx-auto text-xs sm:text-sm text-pink-200/90 mb-4">
-            <div class="bg-pink-950/30 p-2.5 rounded-lg border border-pink-500/20">✨ Loyalty: <strong>100%</strong></div>
-            <div class="bg-pink-950/30 p-2.5 rounded-lg border border-pink-500/20">💬 Banter Chemistry: <strong>99.9%</strong></div>
-            <div class="bg-pink-950/30 p-2.5 rounded-lg border border-pink-500/20">🍟 Fry Stealing: <strong>98.5%</strong></div>
-            <div class="bg-pink-950/30 p-2.5 rounded-lg border border-pink-500/20">♾️ Forever Factor: <strong>Infinite</strong></div>
+        <div class="max-w-xl mx-auto glass-card p-6 sm:p-10 border border-pink-500/30 text-center">
+          <!-- Input Row -->
+          <div class="flex flex-col sm:flex-row items-center gap-4 mb-6">
+            <div class="w-full text-left">
+              <label class="block text-xs uppercase tracking-wider text-pink-300 mb-1">Your Name</label>
+              <input id="calc-name1" type="text" value="" placeholder="Enter your name..."
+                class="w-full bg-pink-950/40 border border-pink-400/30 rounded-xl px-4 py-3 text-pink-100 placeholder-pink-300/40 focus:outline-none focus:border-pink-400 transition font-medium">
+            </div>
+            <div class="text-2xl text-pink-400 shrink-0 pt-4 sm:pt-6">
+              <i class="fas fa-heart animate-heartbeat"></i>
+            </div>
+            <div class="w-full text-left">
+              <label class="block text-xs uppercase tracking-wider text-pink-300 mb-1">Partner's Name</label>
+              <input id="calc-name2" type="text" value="" placeholder="Enter partner's name..."
+                class="w-full bg-pink-950/40 border border-pink-400/30 rounded-xl px-4 py-3 text-pink-100 placeholder-pink-300/40 focus:outline-none focus:border-pink-400 transition font-medium">
+            </div>
           </div>
 
-          <p class="text-xs text-pink-300/70 italic">Disclaimer: The universe made this calculator, and the universe does not take no for an answer.</p>
-        </div>
-      </div>
-    </section>
+          <!-- Calculate Trigger Button -->
+          <button id="calc-trigger-btn"
+            class="btn-rose-shimmer font-semibold px-8 py-3.5 rounded-full text-base sm:text-lg flex items-center gap-2 mx-auto mb-6">
+            <i class="fas fa-bolt"></i>
+            <span>Calculate Compatibility</span>
+          </button>
 
-    <!-- =========================================================================
+          <!-- Dynamic Calculation Progress -->
+          <div id="calc-scanning-wrap" class="hidden space-y-3 mb-6">
+            <div class="calc-meter-track">
+              <div id="calc-meter-fill" class="calc-meter-fill"></div>
+            </div>
+            <p id="calc-status-text" class="text-xs sm:text-sm text-pink-200 font-mono animate-pulse">Initializing
+              cosmic sensors...</p>
+          </div>
+
+          <!-- Result Card (Initially Hidden) -->
+          <div id="calc-result-box" class="hidden pt-6 border-t border-pink-500/20 animate-fade-in">
+            <div
+              class="inline-block px-4 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs uppercase tracking-widest font-semibold mb-2">
+              Verdict Verified</div>
+            <h3 class="font-serif-title text-5xl sm:text-6xl text-gradient-rose font-bold mb-2 text-glow">99.9999%</h3>
+            <p class="font-romantic text-2xl text-pink-200 mb-4">"Mathematically, Astronomically & Eternally Destined"
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 text-left max-w-sm mx-auto text-xs sm:text-sm text-pink-200/90 mb-4">
+              <div class="bg-pink-950/30 p-2.5 rounded-lg border border-pink-500/20">✨ Loyalty: <strong>100%</strong>
+              </div>
+              <div class="bg-pink-950/30 p-2.5 rounded-lg border border-pink-500/20">💬 Banter Chemistry:
+                <strong>99.9%</strong>
+              </div>
+              <div class="bg-pink-950/30 p-2.5 rounded-lg border border-pink-500/20">🍟 Fry Stealing:
+                <strong>98.5%</strong>
+              </div>
+              <div class="bg-pink-950/30 p-2.5 rounded-lg border border-pink-500/20">♾️ Forever Factor:
+                <strong>Infinite</strong>
+              </div>
+            </div>
+
+            <p class="text-xs text-pink-300/70 italic">Disclaimer: The universe made this calculator, and the universe
+              does not take no for an answer.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
          ACT 6: CUTE RELATIONSHIP TRIVIA & QUIZ
          ========================================================================= -->
-    <section id="relationship-quiz" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-circle-question text-pink-400 mr-2"></i> Couple Trivia
+      <section id="relationship-quiz" data-aos="fade-up">
+        <div class="text-center mb-12">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-circle-question text-pink-400 mr-2"></i> Couple Trivia
+            </div>
           </div>
-        </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Honest Questions Only</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Answer with your whole heart (there are no wrong answers... except one).</p>
-      </div>
-
-      <div class="max-w-2xl mx-auto glass-card p-6 sm:p-10 space-y-8">
-        
-        <!-- Question 1 -->
-        <div class="quiz-item" data-q="1">
-          <h4 class="font-medium text-lg text-pink-100 mb-4 flex items-center gap-2">
-            <span class="w-6 h-6 rounded-full bg-pink-500/30 flex items-center justify-center text-xs text-pink-300">1</span>
-            Who fell first vs. who fell harder?
-          </h4>
-          <div class="space-y-3">
-            <button class="quiz-option-btn" data-response="You think you fell first? Look at how obsessed I am with you! 😂💖">
-              <span>I fell first, you fell harder.</span> <i class="fas fa-heart text-pink-400/50"></i>
-            </button>
-            <button class="quiz-option-btn" data-response="Fact check: 100% correct! I didn't just fall, I did a whole Olympic dive! 🏊‍♂️❤️">
-              <span>You fell first AND you fell harder.</span> <i class="fas fa-heart text-pink-400/50"></i>
-            </button>
-            <button class="quiz-option-btn" data-response="A mutual crash landing! And we are never leaving this cloud. ☁️✨">
-              <span>We tripped and fell into each other at the exact same time.</span> <i class="fas fa-heart text-pink-400/50"></i>
-            </button>
-          </div>
-          <div class="quiz-feedback-box hidden mt-3 p-3 rounded-xl bg-pink-500/20 text-pink-200 text-sm font-handwriting text-xl"></div>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Honest Questions Only</h2>
+          <p class="text-pink-100/70 text-sm sm:text-base">Answer with your whole heart (there are no wrong answers...
+            except one).</p>
         </div>
 
-        <!-- Question 2 -->
-        <div class="quiz-item" data-q="2">
-          <h4 class="font-medium text-lg text-pink-100 mb-4 flex items-center gap-2">
-            <span class="w-6 h-6 rounded-full bg-pink-500/30 flex items-center justify-center text-xs text-pink-300">2</span>
-            When you say "I'm not hungry, I just want a bite", what does it mean?
-          </h4>
-          <div class="space-y-3">
-            <button class="quiz-option-btn" data-response="I knew it! That's why I always secretly order 1.5x of everything for you. 🍟👑">
-              <span>I will consume exactly 70% of your meal.</span> <i class="fas fa-burger text-pink-400/50"></i>
-            </button>
-            <button class="quiz-option-btn" data-response="My fries are your fries. What's mine is yours anyway! 😋💖">
-              <span>I just want to taste your food because it tastes better from your plate.</span> <i class="fas fa-utensils text-pink-400/50"></i>
-            </button>
+        <div class="max-w-2xl mx-auto glass-card p-6 sm:p-10 space-y-8">
+
+          <!-- Question 1 -->
+          <div class="quiz-item" data-q="1">
+            <h4 class="font-medium text-lg text-pink-100 mb-4 flex items-center gap-2">
+              <span
+                class="w-6 h-6 rounded-full bg-pink-500/30 flex items-center justify-center text-xs text-pink-300">1</span>
+              Who fell first vs. who fell harder?
+            </h4>
+            <div class="space-y-3">
+              <button class="quiz-option-btn"
+                data-response="You think you fell first? Look at how obsessed I am with you! 😂💖">
+                <span>I fell first, you fell harder.</span> <i class="fas fa-heart text-pink-400/50"></i>
+              </button>
+              <button class="quiz-option-btn"
+                data-response="Fact check: 100% correct! I didn't just fall, I did a whole Olympic dive! 🏊‍♂️❤️">
+                <span>You fell first AND you fell harder.</span> <i class="fas fa-heart text-pink-400/50"></i>
+              </button>
+              <button class="quiz-option-btn"
+                data-response="A mutual crash landing! And we are never leaving this cloud. ☁️✨">
+                <span>We tripped and fell into each other at the exact same time.</span> <i
+                  class="fas fa-heart text-pink-400/50"></i>
+              </button>
+            </div>
+            <div
+              class="quiz-feedback-box hidden mt-3 p-3 rounded-xl bg-pink-500/20 text-pink-200 text-sm font-handwriting text-xl">
+            </div>
           </div>
-          <div class="quiz-feedback-box hidden mt-3 p-3 rounded-xl bg-pink-500/20 text-pink-200 text-sm font-handwriting text-xl"></div>
-        </div>
 
-        <!-- Question 3 -->
-        <div class="quiz-item" data-q="3">
-          <h4 class="font-medium text-lg text-pink-100 mb-4 flex items-center gap-2">
-            <span class="w-6 h-6 rounded-full bg-pink-500/30 flex items-center justify-center text-xs text-pink-300">3</span>
-            Will you promise to be my favorite notification forever?
-          </h4>
-          <div class="flex gap-4">
-            <button class="quiz-option-btn selected w-full text-center justify-center" data-response="Pinky promise sealed by the stars! 🤞💖 You are my home, Aishwarya.">
-              <span class="font-semibold text-pink-100">YES, always & forever! 💖</span>
-            </button>
-            <button id="runaway-quiz-btn" class="quiz-option-btn text-center justify-center shrink-0 w-28 text-pink-400/60" data-response="Nice try! But that button is strictly decorative. 😉">
-              <span>No</span>
-            </button>
+          <!-- Question 2 -->
+          <div class="quiz-item" data-q="2">
+            <h4 class="font-medium text-lg text-pink-100 mb-4 flex items-center gap-2">
+              <span
+                class="w-6 h-6 rounded-full bg-pink-500/30 flex items-center justify-center text-xs text-pink-300">2</span>
+              When you say "I'm not hungry, I just want a bite", what does it mean?
+            </h4>
+            <div class="space-y-3">
+              <button class="quiz-option-btn"
+                data-response="I knew it! That's why I always secretly order 1.5x of everything for you. 🍟👑">
+                <span>I will consume exactly 70% of your meal.</span> <i class="fas fa-burger text-pink-400/50"></i>
+              </button>
+              <button class="quiz-option-btn"
+                data-response="My fries are your fries. What's mine is yours anyway! 😋💖">
+                <span>I just want to taste your food because it tastes better from your plate.</span> <i
+                  class="fas fa-utensils text-pink-400/50"></i>
+              </button>
+              <button class="quiz-option-btn"
+                data-response="And I will happily finish it every single time! Being your official food finisher is my favorite duty. 🍕🥰">
+                <span>I know you'll be there to finish it, so I just take a bite and leave the rest for you.</span> <i
+                  class="fas fa-cookie-bite text-pink-400/50"></i>
+              </button>
+            </div>
+            <div
+              class="quiz-feedback-box hidden mt-3 p-3 rounded-xl bg-pink-500/20 text-pink-200 text-sm font-handwriting text-xl">
+            </div>
           </div>
-          <div class="quiz-feedback-box hidden mt-3 p-3 rounded-xl bg-pink-500/20 text-pink-200 text-sm font-handwriting text-xl"></div>
+
+          <!-- Question 3 -->
+          <div class="quiz-item" data-q="3">
+            <h4 class="font-medium text-lg text-pink-100 mb-4 flex items-center gap-2">
+              <span
+                class="w-6 h-6 rounded-full bg-pink-500/30 flex items-center justify-center text-xs text-pink-300">3</span>
+              Will you promise to be my favorite notification forever?
+            </h4>
+            <div class="flex items-center gap-3 sm:gap-4 relative min-h-[56px]">
+              <button class="quiz-option-btn selected flex-1 text-center justify-center whitespace-nowrap py-3.5 px-4 sm:px-6"
+                data-response="Pinky promise sealed by the stars! 🤞💖 You are my home, ira...">
+                <span class="font-semibold text-pink-100 text-sm sm:text-base">YES, always &amp; forever! 💖</span>
+              </button>
+              <button id="runaway-quiz-btn"
+                class="quiz-option-btn text-center justify-center text-pink-400/70"
+                data-response="Nice try! But that button is strictly decorative. 😉">
+                <span>No</span>
+              </button>
+            </div>
+            <div
+              class="quiz-feedback-box hidden mt-3 p-3 rounded-xl bg-pink-500/20 text-pink-200 text-sm font-handwriting text-xl">
+            </div>
+          </div>
+
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!-- =========================================================================
+      <!-- =========================================================================
          ACT 7: OUR SOUNDTRACK & MEMORY PLAYLIST
          ========================================================================= -->
-    <section id="soundtrack" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-headphones text-pink-400 mr-2"></i> The Playlist
-          </div>
-        </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Songs That Sound Like You</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Click any song to play it and read why it belongs to our story.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Track 1 -->
-        <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-pink-400/50 transition track-card" data-track="perfect" data-title="Perfect - Ed Sheeran">
-          <div class="flex items-center justify-between mb-4">
-            <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 text-xl border border-pink-500/30">
-              <i class="fas fa-music"></i>
+      <section id="soundtrack" data-aos="fade-up">
+        <div class="text-center mb-12">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-headphones text-pink-400 mr-2"></i> The Playlist
             </div>
-            <span class="text-xs font-mono text-pink-300/60">4:23</span>
           </div>
-          <h3 class="font-serif-title text-xl text-pink-100 font-semibold">Perfect</h3>
-          <p class="text-xs uppercase tracking-wider text-pink-400/80 mb-3">Ed Sheeran</p>
-          <p class="text-sm text-pink-200/80 leading-relaxed font-light">
-            "Because in a crowd of thousands, you are the only one who looks like home to me. You look perfect every single second."
-          </p>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Songs That Sound Like You</h2>
+          <p class="text-pink-100/70 text-sm sm:text-base">Click any song to play it and read why it belongs to our
+            story.</p>
         </div>
 
-        <!-- Track 2 -->
-        <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-pink-400/50 transition track-card" data-track="thousand-years" data-title="A Thousand Years - Christina Perri">
-          <div class="flex items-center justify-between mb-4">
-            <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 text-xl border border-pink-500/30">
-              <i class="fas fa-music"></i>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Track 1 -->
+          <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-pink-400/50 transition track-card"
+            data-track="perfect" data-title="Perfect - Ed Sheeran">
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 text-xl border border-pink-500/30">
+                <i class="fas fa-music"></i>
+              </div>
+              <span class="text-xs font-mono text-pink-300/60">4:23</span>
             </div>
-            <span class="text-xs font-mono text-pink-300/60">4:45</span>
+            <h3 class="font-serif-title text-xl text-pink-100 font-semibold">Perfect</h3>
+            <p class="text-xs uppercase tracking-wider text-pink-400/80 mb-3">Ed Sheeran</p>
+            <p class="text-sm text-pink-200/80 leading-relaxed font-light">
+              "Because in a crowd of thousands, you are the only one who looks like home to me. You look perfect every
+              single second."
+            </p>
           </div>
-          <h3 class="font-serif-title text-xl text-pink-100 font-semibold">A Thousand Years</h3>
-          <p class="text-xs uppercase tracking-wider text-pink-400/80 mb-3">Christina Perri</p>
-          <p class="text-sm text-pink-200/80 leading-relaxed font-light">
-            "I have loved you for a thousand lifetimes in my mind, and I will choose you in every single universe without hesitating."
-          </p>
-        </div>
 
-        <!-- Track 3 -->
-        <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-pink-400/50 transition track-card" data-track="all-of-me" data-title="All of Me - John Legend">
-          <div class="flex items-center justify-between mb-4">
-            <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 text-xl border border-pink-500/30">
-              <i class="fas fa-music"></i>
+          <!-- Track 2 -->
+          <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-pink-400/50 transition track-card"
+            data-track="thousand-years" data-title="A Thousand Years - Christina Perri">
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 text-xl border border-pink-500/30">
+                <i class="fas fa-music"></i>
+              </div>
+              <span class="text-xs font-mono text-pink-300/60">4:45</span>
             </div>
-            <span class="text-xs font-mono text-pink-300/60">4:29</span>
+            <h3 class="font-serif-title text-xl text-pink-100 font-semibold">A Thousand Years</h3>
+            <p class="text-xs uppercase tracking-wider text-pink-400/80 mb-3">Christina Perri</p>
+            <p class="text-sm text-pink-200/80 leading-relaxed font-light">
+              "I have loved you for a thousand lifetimes in my mind, and I will choose you in every single universe
+              without hesitating."
+            </p>
           </div>
-          <h3 class="font-serif-title text-xl text-pink-100 font-semibold">All of Me</h3>
-          <p class="text-xs uppercase tracking-wider text-pink-400/80 mb-3">John Legend</p>
-          <p class="text-sm text-pink-200/80 leading-relaxed font-light">
-            "All your quirks, your goofy jokes, your sleepy voice, your brilliant mind — all of me loves all of you, completely."
-          </p>
+
+          <!-- Track 3 -->
+          <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-pink-400/50 transition track-card"
+            data-track="all-of-me" data-title="All of Me - John Legend">
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 text-xl border border-pink-500/30">
+                <i class="fas fa-music"></i>
+              </div>
+              <span class="text-xs font-mono text-pink-300/60">4:29</span>
+            </div>
+            <h3 class="font-serif-title text-xl text-pink-100 font-semibold">All of Me</h3>
+            <p class="text-xs uppercase tracking-wider text-pink-400/80 mb-3">John Legend</p>
+            <p class="text-sm text-pink-200/80 leading-relaxed font-light">
+              "All your quirks, your goofy jokes, your sleepy voice, your brilliant mind — all of me loves all of you,
+              completely."
+            </p>
+          </div>
+
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!-- =========================================================================
+      <!-- =========================================================================
          ACT 8: THE WAX-SEALED HANDWRITTEN LOVE LETTER
          ========================================================================= -->
-    <section id="love-letter" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-envelope-open-text text-pink-400 mr-2"></i> From My Soul
+      <section id="love-letter" data-aos="fade-up">
+        <div class="text-center mb-12">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-envelope-open-text text-pink-400 mr-2"></i> From My Soul
+            </div>
           </div>
-        </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">A Letter Sealed With Love</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Tap the wax seal to break it open and unfold what's inside.</p>
-      </div>
-
-      <div class="envelope-wrapper">
-        <div id="envelope-card" class="envelope p-6 sm:p-8 text-center" onclick="toggleLoveLetter()">
-          <div class="wax-seal mx-auto mb-4">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h4 class="font-serif-title text-2xl text-pink-100">For Aishwarya</h4>
-          <p class="text-xs uppercase tracking-widest text-pink-300/80 mt-1 mb-2">Strictly Private & Confidential</p>
-          <span class="text-xs text-pink-400/70 font-mono">(Tap wax seal to open 💌)</span>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">A Letter Sealed With Love</h2>
+          <p class="text-pink-100/70 text-sm sm:text-base">Tap the heart shaped wax seal to break it open and unfold
+            what's inside.
+          </p>
         </div>
 
-        <!-- Unfolded Letter Paper -->
-        <div id="letter-paper" class="letter-paper p-6 sm:p-10 mt-6 border border-pink-300/30">
-          <div class="border-b border-pink-900/10 pb-4 mb-6 flex justify-between items-center">
-            <span class="font-romantic text-2xl text-pink-900 font-bold">My Dearest Aishwarya,</span>
-            <span class="text-xs text-pink-900/50 font-serif-title">Today & Always</span>
+        <div class="envelope-wrapper">
+          <div id="envelope-card" class="envelope p-6 sm:p-8 text-center" onclick="toggleLoveLetter()">
+            <div class="wax-seal mx-auto mb-4">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h4 class="font-serif-title text-2xl text-pink-100">For Aishwarya</h4>
+            <p class="text-xs uppercase tracking-widest text-pink-300/80 mt-1 mb-2">Strictly Private & Confidential</p>
+            <span class="text-xs text-pink-400/70 font-mono">(Tap heart shaped wax seal to open 💌)</span>
           </div>
 
-          <div class="font-handwriting text-2xl sm:text-3xl leading-relaxed space-y-4 text-[#351525]">
-            <p>
-              I don't think words will ever be big enough to hold everything you mean to me, but I'm going to try anyway.
-            </p>
-            <p>
-              You came into my life like a gentle sunrise — unhurried, warm, and suddenly turning every dark corner into something radiant. You are the laugh that catches me off guard, the quiet voice that calms my loudest worries, and the constant thought running in the back of my mind all day long.
-            </p>
-            <p>
-              Thank you for being unapologetically yourself. Thank you for your kindness, your silly humor, your fierce heart, and the way you make loving you the easiest, most natural thing I have ever done.
-            </p>
-            <p>
-              If I had to live this life a thousand times over, in a thousand different worlds, I would spend every single one looking for you until I found your smile again.
-            </p>
-            <div class="text-right pt-6">
-              <p class="font-bold text-3xl text-pink-800">Forever & Always Yours, 💖</p>
-              <p class="text-lg opacity-75 font-serif-title">With all my love</p>
+          <!-- Unfolded Letter Paper -->
+          <div id="letter-paper" class="letter-paper p-6 sm:p-10 mt-6 border border-pink-300/30">
+            <div class="border-b border-pink-900/10 pb-4 mb-6 flex justify-between items-center">
+              <span class="font-romantic text-2xl text-pink-900 font-bold">My Dearest Aishu,</span>
+              <span class="text-xs text-pink-900/50 font-serif-title">Today & Always</span>
+            </div>
+
+            <div class="font-handwriting text-2xl sm:text-3xl leading-relaxed space-y-4 text-[#351525]">
+              <p>
+                I don't think words will ever be big enough to hold everything you mean to me, but I'm going to try
+                anyway.
+              </p>
+              <p>
+                You came into my life like a gentle sunrise — unhurried, warm, and suddenly turning every dark corner
+                into something radiant. You are the laugh that catches me off guard, the quiet voice that calms my
+                loudest worries, and the constant thought running in the back of my mind all day long.
+              </p>
+              <p>
+                Thank you for being unapologetically yourself. Thank you for your kindness, your silly humor, your
+                fierce heart, and the way you make loving you the easiest, most natural thing I have ever done.
+              </p>
+              <p>
+                If I had to live this life a thousand times over, in a thousand different worlds, I would spend every
+                single one looking for you until I found your smile again.
+              </p>
+              <div class="text-right pt-6">
+                <p class="font-bold text-3xl text-pink-800">Forever & Always Yours, 💖</p>
+                <p class="text-lg opacity-75 font-serif-title">With all my love, Honey</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- =========================================================================
-         THE Y.V.A. COLLECTION / MEMORIES IN FRAMES (12 REAL PHOTOS)
+      <!-- =========================================================================
+         FRAMED IN FOREVER / MEMORIES OF US IN FRAMES (12 REAL PHOTOS)
          ========================================================================= -->
-    <section id="memory-gallery" data-aos="fade-up">
-      <div class="text-center mb-10">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-camera-retro text-pink-400 mr-2"></i> In Every Frame
+      <section id="memory-gallery" data-aos="fade-up">
+        <div class="text-center mb-10">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-camera-retro text-pink-400 mr-2"></i> Cherished Memories &amp; Favorite Faces
+            </div>
+          </div>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Framed in Forever</h2>
+          <p class="text-pink-100/75 text-sm sm:text-base max-w-2xl mx-auto">
+            From silly trio hangouts with sis to stolen dates, mountain breezes, and your prettiest smiles — every frame holds a piece of our story ✨
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 sm:gap-4 max-w-6xl mx-auto">
+          <!-- Photo 1: Saree Portrait (11.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/11.jpg" alt="Pure Desi Grace" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Desi Elegance ✨</span>
+            </div>
+          </div>
+
+          <!-- Photo 2: Mall Selfie with Sis (2.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/2.jpg" alt="The Sassy Trio" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">The Trio Crew 🫶</span>
+            </div>
+          </div>
+
+          <!-- Photo 3: Cinema Looking Back Date (12.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/12.jpg" alt="Hand in Hand Rendezvous" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Movie Nights 🎬</span>
+            </div>
+          </div>
+
+          <!-- Photo 4: Mountain Valley Viewpoint (4.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/4.jpg" alt="Mountain Whispers" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Mountain Whispers 🏔️</span>
+            </div>
+          </div>
+
+          <!-- Photo 5: Neon Cafe with Sis & Bunny Ears (5.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/5.jpg" alt="Bunny Ears & Good Vibes" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Partners in Crime 👯‍♀️</span>
+            </div>
+          </div>
+
+          <!-- Photo 6: McDonald's Burger Bite (1.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/1.jpg" alt="The Great Burger Bite" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Foodie Dates 🍔</span>
+            </div>
+          </div>
+
+          <!-- Photo 7: Temple Mandala & Prayer Wheels (8.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/8.jpg" alt="Temple Serenity" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Serenity &amp; Peace 🪔</span>
+            </div>
+          </div>
+
+          <!-- Photo 8: Signature Couple Pout (3.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/3.jpg" alt="Our Signature Pouts" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Classic Pout Game 😜</span>
+            </div>
+          </div>
+
+          <!-- Photo 9: Staircase Hangout with Sis (9.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/9.jpg" alt="Staircase Shenanigans" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Favorite Trio 💖</span>
+            </div>
+          </div>
+
+          <!-- Photo 10: French Fry Sharing (7.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/7.jpg" alt="The French Fry Offering" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Fry Tax Paid 🍟</span>
+            </div>
+          </div>
+
+          <!-- Photo 11: Hilltop Blue Cardigan (10.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/10.jpg" alt="Golden Hour Trail" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Sunlit Beauty ☀️</span>
+            </div>
+          </div>
+
+          <!-- Photo 12: Candid Cafe Smile (6.jpg) -->
+          <div
+            class="gallery-frame group aspect-[4/5] rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg relative">
+            <img src="img/6.jpg" alt="Quiet Table Moments" loading="lazy"
+              class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute inset-x-1.5 bottom-1.5 p-2.5 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end text-center">
+              <span class="text-[10px] text-pink-400 font-semibold uppercase tracking-wider">Coffee &amp; Sweet Talks ☕</span>
+            </div>
           </div>
         </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">The Y.V.A. Collection</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">(Your Very-own Adventures & Every Unforgettable Moment)</p>
-      </div>
+      </section>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 sm:gap-4 max-w-5xl mx-auto">
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/1.jpg" alt="Memory 1" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/2.jpg" alt="Memory 2" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/3.jpg" alt="Memory 3" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/4.jpg" alt="Memory 4" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/5.jpg" alt="Memory 5" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/6.jpg" alt="Memory 6" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/7.jpg" alt="Memory 7" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/8.jpg" alt="Memory 8" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/9.jpg" alt="Memory 9" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/10.jpg" alt="Memory 10" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/11.jpg" alt="Memory 11" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-        <div class="gallery-frame group aspect-square rounded-2xl overflow-hidden glass-card p-1.5 hover:border-pink-400/60 transition duration-300 shadow-lg">
-          <img src="img/12.jpg" alt="Memory 12" loading="lazy" class="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500">
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
+      <!-- =========================================================================
          ACT 9: THE FUTURE & BUCKET LIST ("CHAPTERS YET UNWRITTEN")
          ========================================================================= -->
-    <section id="the-future" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <div class="badge-pill-container mb-3">
-          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
-            <i class="fas fa-compass text-pink-400 mr-2"></i> Our Bucket List
+      <section id="the-future" data-aos="fade-up">
+        <div class="text-center mb-12">
+          <div class="badge-pill-container mb-3">
+            <div
+              class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full glass-card-subtle text-xs sm:text-sm text-pink-300 border border-pink-400/30">
+              <i class="fas fa-compass text-pink-400 mr-2"></i> Our Bucket List
+            </div>
+          </div>
+          <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Chapters Yet Unwritten</h2>
+          <p class="text-pink-100/70 text-sm sm:text-base">Tap on any future adventure to promise we will make it
+            happen.</p>
+        </div>
+
+        <div class="max-w-2xl mx-auto glass-card p-6 sm:p-8 space-y-4">
+
+          <label
+            class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
+            <input type="checkbox" checked disabled class="w-5 h-5 accent-pink-500 rounded cursor-pointer">
+            <span class="text-pink-200 line-through text-base sm:text-lg font-medium">Fall hopelessly in love with each
+              other</span>
+            <span class="ml-auto text-xs text-pink-400 uppercase tracking-widest font-bold">Done ✨</span>
+          </label>
+
+          <label
+            class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
+            <input type="checkbox" checked disabled class="w-5 h-5 accent-pink-500 rounded cursor-pointer">
+            <span class="text-pink-200 line-through text-base sm:text-lg font-medium">Midnight drive with nowhere to go
+              and windows all the way down</span>
+            <span class="ml-auto text-xs text-pink-400 uppercase tracking-widest font-bold">Done ✨</span>
+          </label>
+
+          <!-- 3rd Place: Camping together -->
+          <label
+            class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
+            <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer"
+              data-promise="Unlocked: Bonfire warmth, starry skies, cozy tent cuddles, and talking all night! ⛺✨">
+            <span class="text-pink-100 text-base sm:text-lg">Going camping together, staying the night under the stars,
+              and coming back</span>
+          </label>
+
+          <!-- 4th Place: Temple together -->
+          <label
+            class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
+            <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer"
+              data-promise="Unlocked: Quiet prayers, ringing temple bells, seeking blessings, and holding hands in peace! 🪔🙏✨">
+            <span class="text-pink-100 text-base sm:text-lg">Visiting a temple together to seek blessings for our
+              journey</span>
+          </label>
+
+          <label
+            class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
+            <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer"
+              data-promise="Unlocked: Warm coffee in a thermos, one shared oversized hoodie, watching the sun paint the sky! 🌅">
+            <span class="text-pink-100 text-base sm:text-lg">Watching the sunrise from a hilltop wrapped in a single
+              blanket</span>
+          </label>
+
+          <label
+            class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
+            <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer"
+              data-promise="Unlocked: Flour on our noses, burning the garlic bread, and laughing so hard we order pizza instead! 🍝🍕">
+            <span class="text-pink-100 text-base sm:text-lg">Cooking an overly ambitious dinner together and
+              accidentally burning it</span>
+          </label>
+
+          <label
+            class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
+            <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer"
+              data-promise="Unlocked: Passport stamps, lost in foreign streets, taking pictures only you look good in! ✈️🌍">
+            <span class="text-pink-100 text-base sm:text-lg">Boarding a plane together to a city we've never seen</span>
+          </label>
+
+          <label
+            class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
+            <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer"
+              data-promise="Unlocked: Fairy lights, cozy rugs, a lazy Sunday, and having you right beside me for good! 🏡❤️">
+            <span class="text-pink-100 text-base sm:text-lg">Building a home filled with quiet peace, soft lights, and
+              our laughter</span>
+          </label>
+
+          <div id="promise-toast"
+            class="hidden p-3 rounded-xl bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-400/40 text-pink-200 text-center font-handwriting text-2xl transition">
           </div>
         </div>
-        <h2 class="font-serif-title text-4xl sm:text-5xl text-gradient-rose mb-3">Chapters Yet Unwritten</h2>
-        <p class="text-pink-100/70 text-sm sm:text-base">Tap on any future adventure to promise we will make it happen.</p>
-      </div>
+      </section>
 
-      <div class="max-w-2xl mx-auto glass-card p-6 sm:p-8 space-y-4">
-        
-        <label class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
-          <input type="checkbox" checked disabled class="w-5 h-5 accent-pink-500 rounded cursor-pointer">
-          <span class="text-pink-200 line-through text-base sm:text-lg font-medium">Fall hopelessly in love with each other</span>
-          <span class="ml-auto text-xs text-pink-400 uppercase tracking-widest font-bold">Done ✨</span>
-        </label>
-
-        <label class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
-          <input type="checkbox" checked disabled class="w-5 h-5 accent-pink-500 rounded cursor-pointer">
-          <span class="text-pink-200 line-through text-base sm:text-lg font-medium">Midnight drive with nowhere to go and windows all the way down</span>
-          <span class="ml-auto text-xs text-pink-400 uppercase tracking-widest font-bold">Done ✨</span>
-        </label>
-
-        <label class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
-          <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer" data-promise="Unlocked: Warm coffee in a thermos, one shared oversized hoodie, watching the sun paint the sky! 🌅">
-          <span class="text-pink-100 text-base sm:text-lg">Watching the sunrise from a hilltop wrapped in a single blanket</span>
-        </label>
-
-        <label class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
-          <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer" data-promise="Unlocked: Flour on our noses, burning the garlic bread, and laughing so hard we order pizza instead! 🍝🍕">
-          <span class="text-pink-100 text-base sm:text-lg">Cooking an overly ambitious dinner together and accidentally burning it</span>
-        </label>
-
-        <label class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
-          <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer" data-promise="Unlocked: Passport stamps, lost in foreign streets, taking pictures only you look good in! ✈️🌍">
-          <span class="text-pink-100 text-base sm:text-lg">Boarding a plane together to a city we've never seen</span>
-        </label>
-
-        <label class="flex items-center gap-4 p-3 rounded-xl bg-pink-950/30 hover:bg-pink-900/30 border border-pink-500/20 cursor-pointer transition">
-          <input type="checkbox" class="future-checkbox w-5 h-5 accent-pink-500 rounded cursor-pointer" data-promise="Unlocked: Fairy lights, cozy rugs, a lazy Sunday, and having you right beside me for good! 🏡❤️">
-          <span class="text-pink-100 text-base sm:text-lg">Building a home filled with quiet peace, soft lights, and our laughter</span>
-        </label>
-
-        <div id="promise-toast" class="hidden p-3 rounded-xl bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-400/40 text-pink-200 text-center font-handwriting text-2xl transition"></div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
+      <!-- =========================================================================
          ACT 10: THE GRAND FINALE INVITATION TRIGGER
          ========================================================================= -->
-    <section class="text-center py-12" data-aos="zoom-in">
-      <div class="max-w-xl mx-auto glass-card p-8 sm:p-12 border border-pink-500/40 shadow-2xl relative overflow-hidden">
-        <div class="text-4xl text-pink-400 mb-4 animate-heartbeat"><i class="fas fa-heart"></i></div>
-        <h2 class="font-serif-title text-3xl sm:text-4xl text-gradient-rose mb-4">One Last Secret...</h2>
-        <p class="text-pink-200/80 text-base mb-8 font-light leading-relaxed">
-          You've walked through the memories, the laughs, and the dreams.<br>
-          There's just one final thing I need to show you.
-        </p>
-        <button id="trigger-finale-btn" class="btn-rose-shimmer font-semibold text-lg px-10 py-4 rounded-full tracking-wide">
-          <span>Reveal Final Message ✨</span>
-        </button>
-      </div>
-    </section>
+      <section class="text-center py-12" data-aos="zoom-in">
+        <div
+          class="max-w-xl mx-auto glass-card p-8 sm:p-12 border border-pink-500/40 shadow-2xl relative overflow-hidden">
+          <div class="text-4xl text-pink-400 mb-4 animate-heartbeat"><i class="fas fa-heart"></i></div>
+          <h2 class="font-serif-title text-3xl sm:text-4xl text-gradient-rose mb-4">One Last Secret...</h2>
+          <p class="text-pink-200/80 text-base mb-8 font-light leading-relaxed">
+            You've walked through the memories, the laughs, and the dreams.<br>
+            There's just one final thing I need to show you.
+          </p>
+          <button id="trigger-finale-btn"
+            class="btn-rose-shimmer font-semibold text-lg px-10 py-4 rounded-full tracking-wide">
+            <span>Reveal Final Message ✨</span>
+          </button>
+        </div>
+      </section>
 
     </div> <!-- End of #unlocked-story-content -->
+
+    <!-- Footer -->
+    <footer id="page-footer" class="relative z-10 text-center py-4 text-xs text-pink-200/50 font-light border-t border-pink-500/10">
+      <p>Crafted with endless love, exclusively for Ira 💖</p>
+    </footer>
 
   </main>
 
   <!-- =========================================================================
        THE FINAL SCREEN — FADE TO BLACK CINEMATIC SURPRISE
        ========================================================================= -->
-  <div id="finale-curtain" class="fixed inset-0 z-[2000] bg-[#050107] flex items-center justify-center p-6 text-center">
-    <div class="max-w-2xl w-full">
-      <div id="typewriter-container" class="font-serif-title italic text-2xl sm:text-4xl text-pink-100/90 leading-relaxed min-h-[140px] mb-8"></div>
-      
-      <!-- Big Reveal Card (Revealed after typing) -->
-      <div id="final-surprise-box" class="hidden glass-card p-8 sm:p-12 border border-pink-400/50 shadow-2xl animate-fade-in">
-        <div class="text-5xl text-pink-500 mb-4 animate-heartbeat"><i class="fas fa-crown"></i></div>
-        <h2 class="font-romantic text-5xl sm:text-6xl text-gradient-rose mb-4">Happy Girlfriend's Day, Aishwarya! ❤️</h2>
-        <p class="font-handwriting text-3xl sm:text-4xl text-pink-200 mb-6 leading-relaxed">
-          "I hope I get to keep adding chapters to this story forever."
-        </p>
+  <div id="finale-curtain"
+    class="fixed inset-0 z-[2000] bg-[#050107]/95 backdrop-blur-xl flex flex-col items-center justify-center p-2 sm:p-4 text-center overflow-hidden">
+    <div class="max-w-2xl sm:max-w-3xl w-full my-auto flex flex-col items-center justify-center">
+      <div id="typewriter-container"
+        class="font-serif-title italic text-2xl sm:text-4xl text-pink-100/90 leading-relaxed min-h-[120px] mb-6"></div>
 
-        <div class="p-4 rounded-2xl bg-pink-950/40 border border-pink-500/30 inline-block mb-6 max-w-md">
-          <p class="text-sm uppercase tracking-widest text-pink-300 font-bold mb-1">Your Special Token</p>
-          <p class="text-base text-pink-100 font-serif-title italic">"Lifetime voucher for unlimited hugs, forehead kisses, late night fries, and all my love."</p>
-        </div>
+      <!-- Best Girlfriend Certificate of Excellence Box -->
+      <div id="final-surprise-box" style="display: none;"
+        class="hidden certificate-container p-3 sm:p-5 md:p-6 rounded-3xl border-2 border-amber-400/60 shadow-[0_0_60px_rgba(245,158,11,0.28)] animate-fade-in relative max-w-2xl sm:max-w-3xl w-full mx-auto text-center">
 
-        <div class="flex flex-wrap justify-center gap-4">
-          <button id="replay-btn" class="btn-rose-shimmer text-base px-6 py-3 rounded-full flex items-center gap-2">
-            <i class="fas fa-rotate-left"></i> <span>Replay Experience</span>
-          </button>
-          <button id="love-shower-btn" class="glass-card-subtle text-base px-6 py-3 rounded-full text-pink-200 hover:text-white border border-pink-400/40 flex items-center gap-2">
-            <i class="fas fa-heart"></i> <span>Shower of Love</span>
-          </button>
-        </div>
+        <!-- Ornate Vintage Corner Accents -->
+        <div class="certificate-corner-tl"><i class="fas fa-certificate"></i></div>
+        <div class="certificate-corner-tr"><i class="fas fa-certificate"></i></div>
+        <div class="certificate-corner-bl"><i class="fas fa-certificate"></i></div>
+        <div class="certificate-corner-br"><i class="fas fa-certificate"></i></div>
+
+        <!-- Inner Parchment Border -->
+        <div class="certificate-inner-border p-3 sm:p-4 md:p-5 rounded-2xl bg-black/40 backdrop-blur-sm">
+
+          <!-- Crown / Medallion Crest -->
+          <div class="flex items-center justify-center gap-2 mb-1">
+            <span class="text-amber-400 text-[10px] sm:text-xs tracking-widest uppercase font-semibold">★ ★ ★</span>
+            <div
+              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-amber-500/30 via-yellow-400/40 to-amber-500/20 border-2 border-amber-400/70 flex items-center justify-center text-amber-300 text-sm sm:text-lg shadow-[0_0_20px_rgba(245,158,11,0.4)] animate-heartbeat">
+              <i class="fas fa-crown"></i>
+            </div>
+            <span class="text-amber-400 text-[10px] sm:text-xs tracking-widest uppercase font-semibold">★ ★ ★</span>
+          </div>
+
+          <!-- Official Subheader -->
+          <p class="text-[8.5px] sm:text-[9.5px] uppercase tracking-[0.25em] text-amber-300/80 font-bold mb-1">
+            OFFICIAL LIFETIME AWARD OF SUPREME RECOGNITION
+          </p>
+
+          <!-- Main Certificate Title -->
+          <h2 class="font-serif-title text-xl sm:text-2xl md:text-3xl text-gradient-gold font-bold tracking-wider uppercase mb-0.5 leading-tight">
+            BEST GIRLFRIEND CERTIFICATE
+          </h2>
+          <p class="font-serif-title italic text-[11px] sm:text-xs text-pink-200/80 mb-1">
+            This prestigious certificate is proudly and unconditionally awarded to
+          </p>
+
+          <!-- Recipient Name in Calligraphy -->
+          <div class="my-0.5 sm:my-1">
+            <h1
+              class="font-romantic text-4xl sm:text-5xl md:text-6xl text-amber-200 font-bold tracking-wide drop-shadow-md inline-block leading-tight">
+              Aishwarya
+            </h1>
+            <div class="flex items-center justify-center mt-1">
+              <span class="text-amber-400 text-xs">💛</span>
+            </div>
+          </div>
+
+          <!-- Meaningful Commendations & Personalized Qualities -->
+          <div class="max-w-xl mx-auto mb-2 space-y-0.5 text-pink-100/90 text-[10.5px] sm:text-[11.5px] leading-relaxed font-light">
+            <p>
+              In official recognition of having the kindest heart, the sweetest soul, and the brightest smile that
+              effortlessly illuminates every room.
+            </p>
+            <p class="italic text-amber-200/85 text-[10px] sm:text-[10.5px]">
+              "For your endless patience, your comforting hugs that make all worries vanish, your radiant laugh, and for
+              being not just my girlfriend, but my truest best friend and the greatest blessing in my life."
+            </p>
+          </div>
+
+          <!-- Hallmarks / Merits Badges Grid (Always 4 in a row like in UI) -->
+          <div class="grid grid-cols-4 gap-1.5 sm:gap-2 max-w-2xl mx-auto mb-2 text-left">
+            <div class="p-1.5 rounded-xl bg-amber-500/10 border border-amber-400/30 flex items-center gap-1.5">
+              <span class="text-sm sm:text-base">✨</span>
+              <div>
+                <p class="text-[9px] sm:text-[9.5px] uppercase tracking-wider text-amber-300 font-bold leading-tight">Radiant Smile</p>
+                <p class="text-[8px] text-pink-200/70 leading-tight">Lights up my world</p>
+              </div>
+            </div>
+            <div class="p-1.5 rounded-xl bg-pink-500/10 border border-pink-400/30 flex items-center gap-1.5">
+              <span class="text-sm sm:text-base">💖</span>
+              <div>
+                <p class="text-[9px] sm:text-[9.5px] uppercase tracking-wider text-pink-300 font-bold leading-tight">Purest Heart</p>
+                <p class="text-[8px] text-pink-200/70 leading-tight">Infinite love & care</p>
+              </div>
+            </div>
+            <div class="p-1.5 rounded-xl bg-amber-500/10 border border-amber-400/30 flex items-center gap-1.5">
+              <span class="text-sm sm:text-base">🫂</span>
+              <div>
+                <p class="text-[9px] sm:text-[9.5px] uppercase tracking-wider text-amber-300 font-bold leading-tight">Best Hugs</p>
+                <p class="text-[8px] text-pink-200/70 leading-tight">My safe haven</p>
+              </div>
+            </div>
+            <div class="p-1.5 rounded-xl bg-pink-500/10 border border-pink-400/30 flex items-center gap-1.5">
+              <span class="text-sm sm:text-base">👑</span>
+              <div>
+                <p class="text-[9px] sm:text-[9.5px] uppercase tracking-wider text-pink-300 font-bold leading-tight">Soulmate</p>
+                <p class="text-[8px] text-pink-200/70 leading-tight">100% Irreplaceable</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Official Seal & Signatures Row (Pushed to Far Corners with Seal Centered) -->
+          <div class="w-full flex items-center justify-between px-3 sm:px-6 mt-2">
+            <!-- Left Corner: Issue Date -->
+            <div class="text-left">
+              <p class="text-[8.5px] sm:text-[9px] uppercase tracking-widest text-amber-300/80 font-bold">DATE INAUGURATED</p>
+              <p class="font-serif-title text-xs sm:text-sm text-pink-100 font-medium">September 19, 2026</p>
+              <p class="text-[7.5px] sm:text-[8px] text-amber-300/60 uppercase tracking-wider">VALID: FOR ETERNITY ∞</p>
+            </div>
+
+            <!-- Center: Gold Rosette Seal -->
+            <div class="flex justify-center">
+              <div class="certificate-seal">
+                <div class="text-center leading-none">
+                  <i class="fas fa-heart text-[8px] mb-0.5 block"></i>
+                  <span class="text-[6px] uppercase font-extrabold tracking-tighter block">100% OFFICIAL</span>
+                  <span class="text-[7.5px] font-black uppercase tracking-tight block">BEST</span>
+                  <span class="text-[6px] uppercase font-bold tracking-tighter block">GIRLFRIEND</span>
+                </div>
+                <div class="certificate-ribbon-left"></div>
+                <div class="certificate-ribbon-right"></div>
+              </div>
+            </div>
+
+            <!-- Right Corner: Signature -->
+            <div class="text-right">
+              <p class="text-[8.5px] sm:text-[9px] uppercase tracking-widest text-amber-300/80 font-bold">SIGNED &amp; CERTIFIED BY</p>
+              <p class="font-romantic text-lg sm:text-xl text-pink-100 font-bold leading-tight">God of love</p>
+              <p class="text-[7.5px] sm:text-[8px] text-amber-300/60 uppercase tracking-wider">SEAL OF ETERNAL LOVE 💖</p>
+            </div>
+          </div>
+
+        </div> <!-- End of Inner Border -->
+
+      </div> <!-- End of #final-surprise-box -->
+
+      <!-- Action Buttons: Download PDF, Home Page and Close -->
+      <div id="certificate-actions" style="display: none;" class="hidden mt-2.5 sm:mt-3 flex flex-wrap justify-center items-center gap-2.5 sm:gap-3">
+        <button id="download-cert-btn"
+          class="btn-rose-shimmer font-bold text-xs sm:text-sm px-5 sm:px-6 py-2 rounded-full flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer">
+          <i class="fas fa-file-pdf"></i> <span>Download Certificate (PDF)</span>
+        </button>
+        <button id="home-page-btn"
+          class="glass-card text-xs sm:text-sm px-4 sm:px-5 py-2 rounded-full text-pink-200 hover:text-white border border-pink-400/50 hover:border-pink-300 hover:bg-pink-950/40 flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer font-bold">
+          <i class="fas fa-home"></i> <span>Home Page</span>
+        </button>
+        <button id="close-tab-btn"
+          class="glass-card text-xs sm:text-sm px-4 sm:px-5 py-2 rounded-full text-pink-200 hover:text-white border border-pink-400/50 hover:border-pink-300 hover:bg-pink-950/40 flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer font-bold">
+          <i class="fas fa-times-circle"></i> <span>Close</span>
+        </button>
       </div>
+
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="relative z-10 text-center py-8 text-xs text-pink-200/50 font-light border-t border-pink-500/10">
-    <p>Crafted with endless love, exclusively for Aishwarya. 💖</p>
-  </footer>
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1067,4 +1470,5 @@
   <!-- Main JavaScript Engine -->
   <script src="script.js"></script>
 </body>
+
 </html>
