@@ -715,6 +715,34 @@ h4.text-gradient-rose, h4.text-gradient-gold {
   }
 }
 
+/* Sparkle & Starlight explosion blasting when certificate reveals */
+.finale-sparkle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 55;
+  will-change: transform, opacity;
+  animation: sparkleBurst 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes sparkleBurst {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.2) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(calc(var(--tx) * 0.45), calc(var(--ty) * 0.45)) scale(1.35) rotate(calc(var(--r) * 0.5));
+  }
+  75% {
+    opacity: 0.9;
+    transform: translate(calc(var(--tx) * 0.9), calc(var(--ty) * 0.9)) scale(1.1) rotate(var(--r));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(0.3) rotate(calc(var(--r) * 1.5));
+  }
+}
+
 /* ==========================================================================
    THE 9-BOX INTERACTIVE MEMORY PICTURE PUZZLE GATE
    ========================================================================== */
@@ -1094,8 +1122,8 @@ body.pre-story-locked #page-footer {
    ========================================================================== */
 @media print {
   @page {
-    size: A4 portrait;
-    margin: 0mm; /* Removes all browser default headers (URL, date) and footers (page 1/1) */
+    size: landscape;
+    margin: 0mm; /* Forces landscape orientation and removes all browser default headers/footers */
   }
 
   *, *::before, *::after {
@@ -1106,21 +1134,18 @@ body.pre-story-locked #page-footer {
   }
 
   html, body {
-    width: 210mm !important;
-    height: 297mm !important;
-    max-width: 210mm !important;
-    max-height: 297mm !important;
+    width: 100vw !important;
+    height: 100vh !important;
     margin: 0 !important;
     padding: 0 !important;
     background: #0d040f !important;
     overflow: hidden !important;
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
   }
 
-  /* Hide background canvases, audio controls, main narrative, action buttons, and typewriter */
+  /* Hide background canvases, audio controls, main narrative, action buttons, typewriter, and particles */
   canvas,
   #universe-canvas,
+  #finale-confetti-canvas,
   #bg-video-container,
   #bg-audio,
   #audio-player-widget,
@@ -1133,7 +1158,8 @@ body.pre-story-locked #page-footer {
   #download-cert-btn,
   #home-page-btn,
   #close-tab-btn,
-  .floating-particle-heart {
+  .floating-particle-heart,
+  .finale-sparkle {
     display: none !important;
     visibility: hidden !important;
   }
@@ -1141,16 +1167,13 @@ body.pre-story-locked #page-footer {
   #finale-curtain {
     position: fixed !important;
     inset: 0 !important;
-    width: 210mm !important;
-    height: 297mm !important;
-    max-width: 210mm !important;
-    max-height: 297mm !important;
+    width: 100vw !important;
+    height: 100vh !important;
     margin: 0 !important;
-    padding: 10mm !important;
+    padding: 0 !important;
     background: #0d040f !important;
     backdrop-filter: none !important;
     display: flex !important;
-    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     overflow: hidden !important;
@@ -1161,37 +1184,39 @@ body.pre-story-locked #page-footer {
   #finale-curtain > div {
     width: 100% !important;
     height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 4mm 6mm !important;
     display: flex !important;
-    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
-  /* Sized to perfectly fill standard A4 sheet (210mm x 297mm) without bending or stretching */
+  /* Fully covers the landscape PDF page in the exact aspect ratio of the certificate */
   #final-surprise-box {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     visibility: visible !important;
     opacity: 1 !important;
-    width: 190mm !important;
-    height: 275mm !important;
-    max-width: 190mm !important;
-    max-height: 275mm !important;
-    margin: 0 auto !important;
-    padding: 7mm !important;
+    width: 96vw !important;
+    height: 94vh !important;
+    max-width: 96vw !important;
+    max-height: 94vh !important;
+    margin: auto !important;
+    padding: 4mm 7mm !important;
     box-sizing: border-box !important;
     background: radial-gradient(circle at 50% 25%, #260e1e, #0d0410) !important;
-    border: 3.5px solid #f59e0b !important;
+    border: 3px solid #f59e0b !important;
     border-radius: 20px !important;
     box-shadow: none !important;
+    position: relative !important;
+    overflow: visible !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
-    position: relative !important;
   }
 
   .certificate-inner-border {
@@ -1200,16 +1225,17 @@ body.pre-story-locked #page-footer {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    padding: 6mm 8mm !important;
+    padding: 3.5mm 6.5mm !important;
     box-sizing: border-box !important;
-    border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
-    outline: 1.5px dashed rgba(245, 158, 11, 0.4) !important;
-    outline-offset: -5mm !important;
-    background: rgba(0, 0, 0, 0.45) !important;
+    border: 1.5px solid rgba(245, 158, 11, 0.4) !important;
+    outline: 1px dashed rgba(245, 158, 11, 0.3) !important;
+    outline-offset: -4mm !important;
+    background: rgba(0, 0, 0, 0.4) !important;
     border-radius: 14px !important;
+    overflow: visible !important;
   }
 
-  /* 4 Ornate Corner Rosettes in Print */
+  /* 4 Ornate Corner Rosettes at outer corners */
   .certificate-corner-tl,
   .certificate-corner-tr,
   .certificate-corner-bl,
@@ -1218,52 +1244,72 @@ body.pre-story-locked #page-footer {
     visibility: visible !important;
     position: absolute !important;
     color: #f59e0b !important;
-    font-size: 26px !important;
+    font-size: 24px !important;
     z-index: 50 !important;
   }
-  .certificate-corner-tl { top: -13px !important; left: -13px !important; }
-  .certificate-corner-tr { top: -13px !important; right: -13px !important; }
-  .certificate-corner-bl { bottom: -13px !important; left: -13px !important; }
-  .certificate-corner-br { bottom: -13px !important; right: -13px !important; }
+  .certificate-corner-tl { top: -11px !important; left: -11px !important; }
+  .certificate-corner-tr { top: -11px !important; right: -11px !important; }
+  .certificate-corner-bl { bottom: -11px !important; left: -11px !important; }
+  .certificate-corner-br { bottom: -11px !important; right: -11px !important; }
 
-  /* Clear animations and optimize typography for physical A4 print */
+  /* Animations off for print */
   #final-surprise-box .animate-heartbeat,
   #final-surprise-box .animate-pulse,
   #final-surprise-box .certificate-seal {
     animation: none !important;
   }
 
+  /* Proportional typography to fit landscape page with zero scrolling or overflow */
   #final-surprise-box h1 {
-    font-size: 40pt !important;
-    line-height: 1.15 !important;
-    margin: 1.5mm 0 !important;
+    font-size: 42px !important;
+    line-height: 1.1 !important;
+    margin: 2px 0 !important;
     color: #fef08a !important;
   }
 
   #final-surprise-box h2 {
-    font-size: 20pt !important;
-    line-height: 1.2 !important;
-    margin-bottom: 1.5mm !important;
+    font-size: 22px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 2px !important;
   }
 
   #final-surprise-box p {
-    line-height: 1.4 !important;
+    line-height: 1.35 !important;
+    font-size: 11px !important;
   }
 
-  /* Maintain single-row 4 badges in print */
+  /* 4 Merit Badges in a single row */
   #final-surprise-box .grid {
     display: grid !important;
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: 2mm !important;
+    gap: 8px !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* Official Seal & Signatures Row in Print — Strictly visible at bottom corners */
+  #final-surprise-box .w-full.flex {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin-top: 3px !important;
+    padding: 0 4mm !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   #final-surprise-box .certificate-seal {
-    width: 62px !important;
-    height: 62px !important;
-    box-shadow: none !important;
-    border: 2.5px solid #fde68a !important;
+    width: 54px !important;
+    height: 54px !important;
+    border: 2.5px double #fef3c7 !important;
     background: radial-gradient(circle at 40% 35%, #fde68a 0%, #d97706 60%, #92400e 100%) !important;
+    display: inline-flex !important;
+    position: relative !important;
     overflow: visible !important;
+    box-shadow: none !important;
   }
 
   #final-surprise-box .certificate-seal > div:first-child {
@@ -1274,7 +1320,11 @@ body.pre-story-locked #page-footer {
   .certificate-ribbon-left, .certificate-ribbon-right {
     display: block !important;
     visibility: visible !important;
-    background: #d97706 !important;
+    position: absolute !important;
+    bottom: -10px !important;
+    width: 12px !important;
+    height: 18px !important;
+    background: linear-gradient(to bottom, #d97706, #78350f) !important;
     z-index: 1 !important;
   }
 }

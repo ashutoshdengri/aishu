@@ -1095,41 +1095,122 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
               }
 
-              // 5. Grand Confetti Celebration!
-              if (typeof confetti === 'function') {
-                confetti({
-                  particleCount: 220,
-                  spread: 360,
-                  startVelocity: 55,
-                  origin: { x: 0.5, y: 0.4 },
-                  colors: ['#ff2a70', '#ff69b4', '#ffd700', '#ffffff', '#e5c158'],
-                  zIndex: 99999,
-                });
-
-                setTimeout(() => {
-                  confetti({
-                    particleCount: 120,
-                    angle: 60,
-                    spread: 80,
-                    origin: { x: 0.1, y: 0.8 },
-                    colors: ['#ff2a70', '#ffd700', '#e5c158'],
-                    zIndex: 99999,
-                  });
-                  confetti({
-                    particleCount: 120,
-                    angle: 120,
-                    spread: 80,
-                    origin: { x: 0.9, y: 0.8 },
-                    colors: ['#ff2a70', '#ffd700', '#e5c158'],
-                    zIndex: 99999,
-                  });
-                }, 300);
-              }
+              // 5. Grand Sparkles & Twin Sprinklers Celebration!
+              launchConfettiAndSprinklers();
             }, 750);
           }, 1200);
         });
       }, 800);
     });
+  }
+
+  // Sparkles & Golden Stars Blasting from the Certificate Box
+  function blastSparklesAndHearts() {
+    const curtain = document.getElementById('finale-curtain');
+    if (!curtain) return;
+
+    const sparkles = ['✨', '⭐', '🌟', '💫', '💛', '💖', '👑', '🎉', '🌹'];
+    const count = 48;
+
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement('span');
+      el.className = 'finale-sparkle';
+      el.textContent = sparkles[Math.floor(Math.random() * sparkles.length)];
+
+      // Centered around the certificate
+      const startX = 50 + (Math.random() - 0.5) * 45;
+      const startY = 46 + (Math.random() - 0.5) * 35;
+      el.style.left = `${startX}%`;
+      el.style.top = `${startY}%`;
+
+      const angle = Math.random() * Math.PI * 2;
+      const distance = 130 + Math.random() * 260;
+      const tx = Math.cos(angle) * distance;
+      const ty = Math.sin(angle) * distance;
+      const r = (Math.random() - 0.5) * 720;
+      const size = 18 + Math.random() * 24;
+
+      el.style.fontSize = `${size}px`;
+      el.style.setProperty('--tx', `${tx}px`);
+      el.style.setProperty('--ty', `${ty}px`);
+      el.style.setProperty('--r', `${r}deg`);
+      el.style.animationDelay = `${Math.random() * 0.35}s`;
+
+      curtain.appendChild(el);
+      setTimeout(() => el.remove(), 2600);
+    }
+  }
+
+  // Dual Sprinklers & Fireworks Celebration Cannon
+  function launchConfettiAndSprinklers() {
+    // 1. Guaranteed DOM Sparkle Cannon (Works regardless of network or canvas support)
+    blastSparklesAndHearts();
+
+    // 2. Canvas Confetti Fireworks & Continuous Twin Sprinklers
+    if (typeof confetti === 'function') {
+      const finaleCanvas = document.getElementById('finale-confetti-canvas');
+      let myConfetti = confetti;
+      if (finaleCanvas) {
+        try {
+          myConfetti = confetti.create(finaleCanvas, { resize: true, useWorker: true });
+        } catch (e) {
+          myConfetti = confetti;
+        }
+      }
+
+      // Initial Grand Central Fireworks Blast
+      myConfetti({
+        particleCount: 180,
+        spread: 140,
+        startVelocity: 55,
+        origin: { x: 0.5, y: 0.45 },
+        colors: ['#ffd700', '#ff2a70', '#ff69b4', '#ffffff', '#e5c158', '#f59e0b', '#fb7185'],
+        zIndex: 99999
+      });
+
+      // Second central starburst
+      setTimeout(() => {
+        myConfetti({
+          particleCount: 90,
+          spread: 100,
+          startVelocity: 45,
+          origin: { x: 0.5, y: 0.35 },
+          colors: ['#ffd700', '#ffffff', '#fbbf24', '#ff69b4'],
+          zIndex: 99999
+        });
+      }, 350);
+
+      // Continuous Twin Sprinklers shooting from left and right corners for 4.5 seconds!
+      const duration = 4500;
+      const end = Date.now() + duration;
+
+      (function frame() {
+        // Left Corner Sprinkler (Shooting Up-Right)
+        myConfetti({
+          particleCount: 6,
+          angle: 60,
+          spread: 55,
+          startVelocity: 52,
+          origin: { x: 0.02, y: 0.88 },
+          colors: ['#ffd700', '#ff69b4', '#ff2a70', '#ffffff', '#fbbf24'],
+          zIndex: 99999
+        });
+        // Right Corner Sprinkler (Shooting Up-Left)
+        myConfetti({
+          particleCount: 6,
+          angle: 120,
+          spread: 55,
+          startVelocity: 52,
+          origin: { x: 0.98, y: 0.88 },
+          colors: ['#ffd700', '#ff69b4', '#ff2a70', '#ffffff', '#fbbf24'],
+          zIndex: 99999
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    }
   }
 
   const downloadCertBtn = document.getElementById('download-cert-btn');

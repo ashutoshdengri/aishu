@@ -204,7 +204,7 @@
       <!-- Victory Reveal Banner (Shown on Solve) -->
       <div id="puzzle-victory-banner"
         class="hidden mt-3 p-3 rounded-xl bg-gradient-to-r from-amber-500/20 via-yellow-500/25 to-amber-500/20 border border-amber-400/50 animate-fade-in">
-        <h3 class="font-romantic text-xl sm:text-2xl text-gradient-gold font-bold mb-0.5">🎉 You Completed Our Picture!
+        <h3 class="font-romantic text-xl sm:text-2xl text-gradient-gold font-bold mb-0.5">You Completed Our Picture!
         </h3>
         <p class="font-handwriting text-sm sm:text-base text-amber-200 mb-2">Our entire world is now unlocked for you,
           my love 💖</p>
@@ -1315,7 +1315,9 @@
        ========================================================================= -->
   <div id="finale-curtain"
     class="fixed inset-0 z-[2000] bg-[#050107]/95 backdrop-blur-xl flex flex-col items-center justify-center p-2 sm:p-4 text-center overflow-hidden">
-    <div class="max-w-2xl sm:max-w-3xl w-full my-auto flex flex-col items-center justify-center">
+    <!-- Dedicated Canvas for Finale Confetti & Sprinklers -->
+    <canvas id="finale-confetti-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-30"></canvas>
+    <div class="max-w-2xl sm:max-w-3xl w-full my-auto flex flex-col items-center justify-center relative z-40">
       <div id="typewriter-container"
         class="font-serif-title italic text-2xl sm:text-4xl text-pink-100/90 leading-relaxed min-h-[120px] mb-6"></div>
 
